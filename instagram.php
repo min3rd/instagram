@@ -24,7 +24,9 @@
                      <div>
 					 <div class="wrapper">
 							<ul id="results"><!-- results appear here --></ul>
-							<div class="loading-info"><img src="ajax-loader.gif" /></div>
+							<div class="_sgy7u">
+								<div class="_jf5s3 _c7qti"></div>
+							 </div>
 						</div>
                            <header class="_s6yvg">
                               <a class="_5lote _pss4f _vbtk2" href="https://www.instagram.com/xxxibgdrgn/" style="width: 30px; height: 30px;"><img class="_a012k" src="./Instagram_files/18162043_172383386620119_6892177918751932416_a.jpg"></a>
@@ -142,9 +144,6 @@
                               </section>
                            </div>
                         </article>
-                     </div>
-                     <div class="_sgy7u">
-                        <div class="_jf5s3 _c7qti"></div>
                      </div>
                   </div>
                </section>
