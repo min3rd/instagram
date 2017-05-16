@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+	session_start();
+?>
 <html lang="vi" class="js logged-in ">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
