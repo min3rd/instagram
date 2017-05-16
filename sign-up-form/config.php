@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $userserver = "root";
-$password = "123456";
+$password = "";
 $dbname = "instagram";
 
 // Create connection
