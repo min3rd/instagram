@@ -12,7 +12,7 @@
 			$gender = 1;
 		else
 			$gender = 0;
-		$sql = "insert into user (username, password, fullname, email, sex, dob) values ('$user_name', '$password', '$full_name', '$email', '$gender', '$yyyy'-'$mm'-'$dd')";
+		$sql = "insert into user (username, password, fullname, email, sex, dob, image) values ('$user_name', '$password', '$full_name', '$email', '$gender', '$yyyy'-'$mm'-'$dd', 'login.jpg')";
 		if($conn->query($sql) == TRUE){
 			$mess = "Sign up success";
 			echo "<script> alert('$mess') </script>";
