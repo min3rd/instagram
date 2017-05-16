@@ -16,24 +16,105 @@ if(!is_numeric($page_number)){
 $position = (($page_number-1) * $item_per_page);
 
 //fetch records using page position and item per page.
-$post = $mysqli->prepare("SELECT * FROM `post` WHERE userID IN ( SELECT userID FROM follow WHERE follow.follower = ?) ORDER by time  LIMIT ?, ?");
+$post = $mysqli->prepare("SELECT * FROM `post` WHERE userID IN ( SELECT userID FROM follow WHERE follow.follower = ?) ORDER by time DESC LIMIT ?, ?");
 
 //bind parameters for markers, where (s = string, i = integer, d = double,  b = blob)
 //for more info https://www.sanwebe.com/2013/03/basic-php-mysqli-usage
 $post->bind_param("idd",$_SESSION["userID"], $position, $item_per_page); 
 $post->execute(); //Execute prepared Query
 // sua id name message, thay vao la cac thuoc tinh cua post
-$post->bind_result($postID, $userID, $time); //bind variables to prepared statement
+$post->bind_result($postID, $userID, $time,$mediaPath,$caption); //bind variables to prepared statement
 
 //output results from database
 while($post->fetch()){ //fetch values
     // day la doan div bai viet. gom nguoi dang, caption, so luot like, anh,...
-	echo $userID."</br>";
-	$user=$mysqli->query("SELECT * FROM user WHERE userID =".$userID);
-	if ($user->num_rows >0) {
-		while($row = $user->fetch_assoc()) {
-			echo $row["username"];
-		}
+	// timePost so sánh timeCurrent 
+	$timePost	= $time;
+	$timeReply	= date('d/m/Y H:i:s');
+
+	$datePost	= date_parse_from_format('d/m/Y H:i:s', $timePost);
+	$dateReply	= date_parse_from_format('d/m/Y H:i:s', $timeReply);
+
+	$tsPost		= mktime($datePost['hour'], $datePost['minute'], $datePost['second'], $datePost['month'], $datePost['day'], $datePost['year']);
+	$tsReply	= mktime($dateReply['hour'], $dateReply['minute'], $dateReply['second'], $dateReply['month'], $dateReply['day'], $dateReply['year']);
+
+	$distance 	= $tsReply - $tsPost;
+
+	// 23 seconds ago
+	// 23 minutues ago
+	// 2 hours ago
+	// Yesterday at 09:20:23
+	// 18/06/2013 at 09:20:23
+
+
+	switch ($distance){
+		case ($distance < 60): 
+			$result = ($distance == 1) ? $distance . ' second ago' : $distance . ' seconds ago';
+			break;
+		case ($distance >= 60 && $distance < 3600):
+			$minute	= round($distance/60);
+			$result = ($minute == 1) ? $minute . ' minute ago' : $minute . ' minutes ago';
+			break;
+		case ($distance >= 3600 && $distance < 86400):
+			$hour	= round($distance/3600);
+			$result = ($hour == 1) ? $hour . ' hour ago' : $hour . ' hours ago';
+			break;
+		default:
+			$day = round($distance/86400);
+			$result = $day.' days ago';
+			break;
 	}
+	echo '<article class="_h2d1o _j5hrx _pieko">';
+	echo '<header class="_s6yvg">';
+	echo '<a class="_5lote _pss4f _vbtk2" href="'.'" style="width: 30px; height: 30px;"><img class="_a012k" src="'.'"></a>';
+	echo '<div class="_dzy0a">';
+	echo '<a class="_4zhc5 notranslate _ook48" title="'.$userID.'" href="'.'">'.'</a>';
+	echo '<div class="_bm6zw">
+				<!-- react-empty: 741 -->
+					</div>
+				</div>
+		 ';
+	echo '<a class="_ljyfo" href="#"><time class="_379kp" datetime="'.$time.'">'.$result.'</time></a>';
+	echo '</header>';
+	echo '<div>';
+	echo 	'<div class="_9f9pr">';
+	echo 		'<div>';
+	echo 			'<div class="_22yr2 _e0mru">';
+	echo				'<div class="_jjzlb" style="padding-bottom: 100%;"><img alt="@'.$userID.'" class="_icyx7" id="pImage_10" src="'.$mediaPath.'"></div>';
+	echo	'
+							<!-- react-empty: 750 -->
+						   <div class="_ovg3g"></div>
+						</div>
+					 </div>
+	';
+	echo '</div></div>';
+	echo '
+			<div class="_es1du _rgrbt">
+                              <section class="_tfkbw _hpiil">
+                                 <div class="_iuf51 _oajsw">
+                                    <span class="_tf9x3">
+                                       <!-- react-text: 777 --><!-- /react-text --><span>317,631</span><!-- react-text: 779 --> lượt thích<!-- /react-text -->
+                                    </span>
+                                 </div>
+                              </section>
+                              <ul class="_mo9iw _pnraw">
+                                 <li class="_nk46a">
+                                    <h1><a class="_4zhc5 notranslate _iqaka" title="xxxibgdrgn" href="https://www.instagram.com/xxxibgdrgn/">xxxibgdrgn</a><span><a class="notranslate" href="https://www.instagram.com/peaceminusonedotcom/">@peaceminusonedotcom</a></span></h1>
+                                 </li>
+                                 <li class="_nk46a"><button class="_l086v _ifrvy">tải thêm bình luận</button></li>
+                                 <li class="_nk46a"><a class="_4zhc5 notranslate _iqaka" title="cyhg1301" href="https://www.instagram.com/cyhg1301/">cyhg1301</a><span><span>😊</span></span></li>
+                                 <li class="_nk46a"><a class="_4zhc5 notranslate _iqaka" title="quanshijiezhiyouke" href="https://www.instagram.com/quanshijiezhiyouke/">quanshijiezhiyouke</a><span><span>各种夹子</span></span></li>
+                                 <li class="_nk46a"><a class="_4zhc5 notranslate _iqaka" title="phuongdeip" href="https://www.instagram.com/phuongdeip/">phuongdeip</a><span><a href="https://www.instagram.com/explore/tags/pink/">#Pink</a><span> </span><a href="https://www.instagram.com/explore/tags/blue/">#blue</a><span> </span><a href="https://www.instagram.com/explore/tags/green/">#green</a><span> my color</span></span></li>
+                                 <li class="_nk46a"><a class="_4zhc5 notranslate _iqaka" title="lailafatmalaa" href="https://www.instagram.com/lailafatmalaa/">lailafatmalaa</a><span><span>🙄</span></span></li>
+                              </ul>
+                              <section class="_jveic _dsvln">
+                                 <a class="_ebwb5 _1tv0k" href="https://www.instagram.com/#" role="button" aria-disabled="false"><span class="_soakw coreSpriteHeartFull">Bỏ thích</span></a>
+                                 <form class="_k3t69"><input type="text" class="_7uiwk _qy55y" aria-label="Thêm bình luận…" placeholder="Thêm bình luận…" value=""></form>
+                                 <button class="_9q0pi coreSpriteEllipsis _soakw">Tùy chọn khác</button>
+                              </section>
+                           </div>
+		';
+	
+	echo '</article>';
 }
 ?>

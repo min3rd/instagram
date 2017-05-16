@@ -1,5 +1,9 @@
-<!DOCTYPE html>
-<!-- saved from url=(0026)https://www.instagram.com/ -->
+<?php
+	session_start();
+	if($_SESSION["userID"] !== NULL){
+		header("Location: instagram.php");
+	}
+?>
 <html lang="vi" class="js not-logged-in ">
    <!--<![endif]-->
    <head>
@@ -17,7 +21,7 @@
             <main class="_6ltyr _rnpza" role="main">
                <article class="_60k3m">
                   <div class="_fdj9b _3mng4">
-                     <div class="_klk8w"><img class="_9gpks _5n966" src="./Instagram_files/aafd8c6b005d.jpg"><img class="_9gpks _mpbzm" src="./Instagram_files/2d9d7248af43.jpg"><img class="_9gpks" src="./Instagram_files/629d23a3c7b2.jpg"><img class="_9gpks" src="./Instagram_files/001bc33056c1.jpg"><img class="_9gpks" src="./Instagram_files/f5ae123ab1e2.jpg"></div>
+                     <div class="_klk8w"><img class="_9gpks _5n966" src="./images/login.jpg"><img class="_9gpks _mpbzm" src="./images/login.jpg"><img class="_9gpks" src="./images/login.jpg"><img class="_9gpks" src="./images/login.jpg"><img class="_9gpks" src="./images/login.jpg"></div>
                   </div>
                   <div class="_p8ymb">
                      <div class="_nvyyp">
