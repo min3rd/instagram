@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	if($_SESSION["userID"] !== NULL){
-		header("Location: instagram.php");
+		header("Location: index.php");
 	}
 ?>
 <html lang="vi" class="js not-logged-in ">

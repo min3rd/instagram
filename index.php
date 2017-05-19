@@ -19,6 +19,42 @@
 		.wrapper > ul#results li{margin-bottom: 1px;background: #f9f9f9;padding: 20px;list-style: none;}
 		.loading-info{text-align:center;}
 	</style>
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function()
+	{	
+		//khai báo nút submit form
+		var submit   = $("button[type='submit']");
+		
+		//khi thực hiện kích vào nút Login
+		submit.click(function()
+		{
+			//khai báo các biến
+			var userID = $("input[name='userID']").val(); //lấy giá trị input tài khoản
+			var caption = $("input[name='caption']").val(); //lấy giá trị input mật khẩu
+			var image =$("input[name='upload']").val();
+			
+			//lay tat ca du lieu trong form	login
+			var data = $('form#formUpload').serialize();
+			//su dung ham $.ajax()
+			$.ajax({
+			type : 'POST', //kiểu post
+			url  : 'updateStatus.php', //gửi dữ liệu sang trang submit.php
+			data : data,
+			success :  function(data)
+				   {						
+						if(data == 'false')
+						{
+							alert('Đã xảy ra lỗi. Thử lại sau.');
+						}else{
+							$('#content').html(data);
+						}
+				   }
+			});
+			return false;
+		});
+	});
+	</script>
    </head>
    <body class="">
       <span id="react-root">
@@ -29,10 +65,20 @@
                      <div>
 					<section class="_jveic _dsvln">
                                 <div class="_9f9pr">
-									<form class="_k3t69">
-										<input type="file" name="upload" class="upload" title="Choose a file to upload">
-										<input type="text" class="_7uiwk _qy55y" aria-label="Bạn đanng nghĩ gì..." placeholder="Bạn đanng nghĩ gì..." value="" name="caption">
-									</form>
+									<article class="_h2d1o _j5hrx _pieko">
+										<form class="_k3t69" action="updateStatus.php" method="POST" ip="formUpload">
+											<input type ="hidden" name ="userID" value="<?php echo $_SESSION["userID"];?>">
+											<input type="text" class="_7uiwk _qy55y" aria-label="Bạn đanng nghĩ gì..." placeholder="Bạn đanng nghĩ gì..." value="" name="caption">
+											<div class="_bm6zw">
+												<!-- react-empty: 741 -->
+											</div>
+											<div class="browse-wrap">
+												<div class="title">Choose a file to upload</div>
+												<input type="file" name="upload" class="upload" title="Choose a file to upload">
+											</div>
+											<span class="upload-path"></span>
+										</form>
+									</article>
 								</div>
                     </section>
 					 <div class="wrapper">
@@ -81,7 +127,7 @@
                         <li class="_fw3ds"><a href="https://www.instagram.com/explore/locations/">Thư mục</a></li>
                      </ul>
                   </nav>
-                  <span class="_es4h6">© 2017 Instagram</span>
+                  <span class="_es4h6">© <?php echo date('YYYY');?> Instagram</span>
                </div>
             </footer>
             <!-- react-empty: 967 -->

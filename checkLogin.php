@@ -5,7 +5,7 @@
 	if ($rs->num_rows > 0) {
 		while($row = $rs->fetch_assoc()) {
 			$_SESSION["userID"]=$row["userID"];
-			header("Location: instagram.php");
+			header("Location: index.php");
 		}
 	} else {
 		header("Location: login.php");
