@@ -44,6 +44,11 @@ while($post->fetch()){ //fetch values
 	$sql = "SELECT * FROM liked WHERE postID = ".$postID;
 	$like = $conn->query($sql);
 	
+	//kiem tra xem nguoi dung da like bai viet chua
+	$sql = "SELECT * FROM liked WHERE postID = ".$postID." AND userID = ".$_SESSION["userID"];
+	$liked = $conn->query($sql);
+	
+	
 	//Tim comment
 	$sql = "SELECT * FROM comment WHERE postID = ".$postID;
 	$comment = $conn->query($sql);
@@ -123,28 +128,40 @@ while($post->fetch()){ //fetch values
                                  </li>';
 								 if ($comment->num_rows > 0) {
 									// output data of each row
+									$i=0;
 									while($row = $comment->fetch_assoc()) {
-										$servername2 = "localhost";
-										$username2 = "root";
-										$password2 = "";
-										$dbname2 = "instagram";
-
-										// Create connection
-										$conn2 = new mysqli($servername2, $username2, $password2, $dbname2);
-										$sql2 = "SELECT * FROM user WHERE userID = ".$row["userID"];
-										//Tim nguoi dang bai
-										$user2 = $conn2->query($sql2);
-										$row2 = $user2->fetch_assoc();
-										echo '<li class="_nk46a"><a class="_4zhc5 notranslate _iqaka" title="'.$row2["username"].'" href="profile.php/?username='.$row2["username"].'">'.$row2["username"].'</a><span><span>'.$row["comment"].'</span></span></li>';
-										$conn2->close();
+										if($i<5){
+											$servername2 = "localhost";
+											$username2 = "root";
+											$password2 = "";
+											$dbname2 = "instagram";
+											// Create connection
+											$conn2 = new mysqli($servername2, $username2, $password2, $dbname2);
+											$sql2 = "SELECT * FROM user WHERE userID = ".$row["userID"];
+											//Tim nguoi dang bai
+											$user2 = $conn2->query($sql2);
+											$row2 = $user2->fetch_assoc();
+											echo '<li class="_nk46a"><a class="_4zhc5 notranslate _iqaka" title="'.$row2["username"].'" href="profile.php/?username='.$row2["username"].'">'.$row2["username"].'</a><span><span>'.$row["comment"].'</span></span></li>';
+											$conn2->close();
+										}
+										$i++;
 									}
 								}
 	echo '
 								 <!--<li class="_nk46a"><button class="_l086v _ifrvy">tải thêm bình luận</button></li>-->
 							  </ul>
 							  <section class="_jveic _dsvln">
-								 <a class="_ebwb5 _1tv0k" href="https://www.instagram.com/#" role="button" aria-disabled="true"><span class="_soakw coreSpriteHeartFull">Bỏ thích</span></a>
-								 <form class="_k3t69"><input type="text" class="_7uiwk _qy55y" aria-label="Thêm bình luận…" placeholder="Thêm bình luận…" value=""></form>
+								 <a class="_ebwb5 _1tv0k" href="like.php?postID='.$postID.'" role="button" aria-disabled="true"><span class="_soakw ';
+	if($liked->num_rows > 0){
+		echo 'coreSpriteHeartFull';
+	}else{
+		echo 'coreSpriteHeartOpen';
+	}							 
+	echo 						'">Like Or Dislike</span></a>
+								
+								 <form class="_k3t69" action = "comment.php" method="GET">
+								 <input type="hidden" name="postID" value="'.$postID.'">
+								 <input type="text" class="_7uiwk _qy55y" aria-label="Thêm bình luận…" placeholder="Thêm bình luận…" value="" name="comment"></form>
 								 <button class="_9q0pi coreSpriteEllipsis _soakw">Tùy chọn khác</button>
 							  </section>
 							</div>

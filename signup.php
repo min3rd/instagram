@@ -30,17 +30,19 @@
                                     <!-- react-text: 123 --><!-- /react-text --><!-- react-text: 124 --><!-- /react-text -->
                                     <form class="_rwf8p" action="checkLogin.php" method="GET">
                                         <div class="_ccek6 _i31zu"><input type="text" class="_kp5f7 _qy55y" aria-describedby="" aria-label="Tên người dùng" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="30" name="username" placeholder="Tên người dùng"></div>
+                                        <div class="_ccek6 _i31zu"><input type="text" class="_kp5f7 _qy55y" aria-describedby="" aria-label="Biệt danh" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="30" name="fullname" placeholder="Biệt danh"></div>
+                                        <div class="_ccek6 _i31zu"><input type="text" class="_kp5f7 _qy55y" aria-describedby="" aria-label="Email" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="30" name="email" placeholder="Email"></div>
                                         <div class="_ccek6 _i31zu">
                                             <input type="password" class="_kp5f7 _qy55y" aria-describedby="" aria-label="Mật khẩu" aria-required="true" autocapitalize="off" autocorrect="off" name="password" placeholder="Mật khẩu">
                                             <!--<div class="_j4ox0"><a class="_19gtn" href="https://www.instagram.com/accounts/password/reset/">Quên?</a></div>-->
                                         </div>
-                                        <span class="_rz1lq _7k49n"><input type="submit" value="Đăng nhập" class="_ah57t _84y62 _i46jh _rmr7s"></span>
+                                        <span class="_rz1lq _7k49n"><input type="submit" value="Đăng ký" class="_ah57t _84y62 _i46jh _rmr7s"></span>
                                     </form>
                                 </div>
                             </div>
                             <div class="_nvyyp">
                                 <p class="_dyp7q">
-                                    <!-- react-text: 144 -->Bạn không có tài khoản? <!-- /react-text --><a class="_fcn8k" href="signup.php">Đăng ký</a><!-- react-text: 146 --><!-- /react-text -->
+                                    <!-- react-text: 144 -->Bạn có tài khoản? <!-- /react-text --><a class="_fcn8k" href="login.php">Đăng nhập</a><!-- react-text: 146 --><!-- /react-text -->
                                 </p>
                             </div>
                             <div class="_m8ogu">
@@ -64,7 +66,7 @@
                                 <li class="_fw3ds"><a href="https://www.instagram.com/explore/locations/">Thư mục</a></li>
                             </ul>
                         </nav>
-                        <span class="_es4h6">© <?php echo date("Y")?> Instagram</span>
+                        <span class="_es4h6">© 2017 Instagram</span>
                     </div>
                 </footer>
                 <div class="_nl1vc _445wt _7shjj">

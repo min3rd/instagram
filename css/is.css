@@ -62,7 +62,7 @@ div.browse-wrap {
 }
 
 ._fceuw {
-	background-image: url(/static/images/ico/favicon-192.png/b407fa101800.png);
+	background-image: url(static/images/ico/favicon-192.png/b407fa101800.png);
 	background-size: contain;
 	display: block;
 	height: 75px;
@@ -173,7 +173,7 @@ table {
 }
 
 body {
-	
+
 }
 
 #react-root, body, html {
@@ -200,7 +200,7 @@ a:active {
 }
 
 .createSpriteExpand, .createSpriteFiltersUpsell, .createSpriteRotate {
-	background-image: url(/static/sprites/create/6ce404.png);
+	background-image: url(static/sprites/create/6ce404.png);
 	background-repeat: no-repeat;
 	background-position: -60px 0;
 	height: 30px;
@@ -221,7 +221,7 @@ a:active {
 
 @media (min-device-pixel-ratio:1.5), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
 	.createSpriteExpand, .createSpriteFiltersUpsell, .createSpriteRotate {
-		background-image: url(/static/sprites/create/9e7855.png);
+		background-image: url(static/sprites/create/9e7855.png);
 		background-size: 89px 89px;
 		background-position: -59px 0
 	}
@@ -450,7 +450,7 @@ a:active {
 }
 
 .coreSpriteAddPhoto, .coreSpriteAppIcon, .coreSpriteAppStoreButton, .coreSpriteBoomerang {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -94px -53px;
 	height: 80px;
@@ -476,7 +476,7 @@ a:active {
 }
 
 .coreSpriteCameraActive, .coreSpriteCameraInactive, .coreSpriteChevronDownGrey, .coreSpriteChevronRight {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -281px -90px;
 	height: 21px;
@@ -500,7 +500,7 @@ a:active {
 }
 
 .coreSpriteClose, .coreSpriteComment, .coreSpriteDesktopNavActivity, .coreSpriteDesktopNavExplore {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -355px -94px;
 	height: 20px;
@@ -522,7 +522,7 @@ a:active {
 }
 
 .coreSpriteDesktopNavLogoAndWordmark, .coreSpriteDesktopNavProfile, .coreSpriteDismissLarge, .coreSpriteDismissSmall {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -177px 0;
 	height: 35px;
@@ -548,7 +548,7 @@ a:active {
 }
 
 .coreSpriteDropdownArrowBlue5, .coreSpriteDropdownArrowBlue6, .coreSpriteDropdownArrowGrey9 {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -211px -115px;
 	height: 6px;
@@ -564,7 +564,7 @@ a:active {
 }
 
 .coreSpriteDropdownArrowWhite, .coreSpriteEllipsis, .coreSpriteFacebookIcon, .coreSpriteFacebookIconInverted {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -244px -115px;
 	height: 6px;
@@ -588,7 +588,7 @@ a:active {
 }
 
 .coreSpriteGlyphGradient, .coreSpriteGlyphWhite, .coreSpriteGooglePlayButton, .coreSpriteHashtag {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -106px -223px;
 	height: 40px;
@@ -614,7 +614,7 @@ a:active {
 }
 
 .coreSpriteHeartFull, .coreSpriteHeartOpen, .coreSpriteHeartSmall, .coreSpriteHyperlapse {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -182px -322px;
 	height: 24px;
@@ -638,7 +638,7 @@ a:active {
 }
 
 .coreSpriteInputAccepted, .coreSpriteInputError, .coreSpriteInputRefresh, .coreSpriteInstallBannerLogo {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -355px -24px;
 	height: 22px;
@@ -661,7 +661,7 @@ a:active {
 }
 
 .coreSpriteLeftChevron, .coreSpriteLeftPaginationArrow, .coreSpriteLikeAnimationHeart {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -232px -223px;
 	height: 30px;
@@ -681,7 +681,7 @@ a:active {
 }
 
 .coreSpriteLikeHeartFull, .coreSpriteLikeHeartOpen, .coreSpriteLocation, .coreSpriteLock, .coreSpriteLoggedOutWordmark {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: 0 -322px;
 	height: 24px;
@@ -711,7 +711,7 @@ a:active {
 }
 
 .coreSpriteMobileNavActivityActive, .coreSpriteMobileNavActivityInactive, .coreSpriteMobileNavAddPeopleActive {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -294px -272px;
 	height: 24px;
@@ -728,7 +728,7 @@ a:active {
 }
 
 .coreSpriteMobileNavAddPeopleInactive, .coreSpriteMobileNavExploreActive, .coreSpriteMobileNavExploreInactive {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -320px -180px;
 	height: 24px;
@@ -745,7 +745,7 @@ a:active {
 }
 
 .coreSpriteMobileNavHomeActive, .coreSpriteMobileNavHomeInactive, .coreSpriteMobileNavLogo, .coreSpriteMobileNavMenuActive {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -286px -322px;
 	height: 24px;
@@ -769,7 +769,7 @@ a:active {
 }
 
 .coreSpriteMobileNavMenuInactive, .coreSpriteMobileNavProfileActive, .coreSpriteMobileNavProfileInactive, .coreSpriteMobileNavSearchActive {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -320px -272px;
 	height: 24px;
@@ -789,7 +789,7 @@ a:active {
 }
 
 .coreSpriteMobileNavSearchInactive, .coreSpriteMobileNavSettings, .coreSpriteMobileNavTypeLogo, .coreSpriteNotificationLeftChevron {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -138px -272px;
 	height: 24px;
@@ -813,7 +813,7 @@ a:active {
 }
 
 .coreSpriteNotificationRightChevron, .coreSpriteOptionsEllipsis, .coreSpritePagingChevron {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -355px -330px;
 	height: 15px;
@@ -833,7 +833,7 @@ a:active {
 }
 
 .coreSpritePlayIconSmall, .coreSpriteReload, .coreSpriteRightChevron, .coreSpriteRightPaginationArrow {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -355px -158px;
 	height: 19px;
@@ -859,7 +859,7 @@ a:active {
 }
 
 .coreSpriteSearchClear, .coreSpriteSearchIcon, .coreSpriteSidecarIconLarge, .coreSpriteSidecarIconSmall {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -355px -72px;
 	height: 20px;
@@ -885,7 +885,7 @@ a:active {
 }
 
 .coreSpriteSpeechBubbleSmall, .coreSpriteUserTagIndicator, .coreSpriteVerifiedBadge {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -355px -116px;
 	height: 19px;
@@ -905,7 +905,7 @@ a:active {
 }
 
 .coreSpriteVerifiedBadgeSmall, .coreSpriteVideoIconLarge, .coreSpriteVideoIconSmall {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -337px -90px;
 	height: 12px;
@@ -925,7 +925,7 @@ a:active {
 }
 
 .coreSpriteViewCount, .coreSpriteWelcomeDesktop, .coreSpriteWelcomeMobile, .coreSpriteWindowsStoreButton {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -355px -312px;
 	height: 16px;
@@ -952,7 +952,7 @@ a:active {
 
 @media (min-device-pixel-ratio:1.5), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
 	.coreSpriteAddPhoto, .coreSpriteAppIcon {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -93px -52px
 	}
@@ -960,7 +960,7 @@ a:active {
 		background-position: -183px -218px
 	}
 	.coreSpriteAppStoreButton, .coreSpriteBoomerang, .coreSpriteCameraActive, .coreSpriteCameraInactive {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -131px -134px
 	}
@@ -974,7 +974,7 @@ a:active {
 		background-position: -277px -88px
 	}
 	.coreSpriteChevronDownGrey, .coreSpriteChevronRight, .coreSpriteClose, .coreSpriteComment {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -339px -292px
 	}
@@ -988,7 +988,7 @@ a:active {
 		background-position: -50px -292px
 	}
 	.coreSpriteDesktopNavActivity, .coreSpriteDesktopNavExplore, .coreSpriteDesktopNavLogoAndWordmark {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -126px -266px
 	}
@@ -999,7 +999,7 @@ a:active {
 		background-position: -176px 0
 	}
 	.coreSpriteDesktopNavProfile, .coreSpriteDismissLarge, .coreSpriteDismissSmall, .coreSpriteDropdownArrowBlue5 {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -151px -266px
 	}
@@ -1013,7 +1013,7 @@ a:active {
 		background-position: -142px -206px
 	}
 	.coreSpriteDropdownArrowBlue6, .coreSpriteDropdownArrowGrey9, .coreSpriteDropdownArrowWhite {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -152px -206px
 	}
@@ -1024,7 +1024,7 @@ a:active {
 		background-position: -132px -206px
 	}
 	.coreSpriteEllipsis, .coreSpriteFacebookIcon, .coreSpriteFacebookIconInverted, .coreSpriteGlyphGradient {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -56px -218px
 	}
@@ -1038,7 +1038,7 @@ a:active {
 		background-position: -303px -134px
 	}
 	.coreSpriteGlyphWhite, .coreSpriteGooglePlayButton, .coreSpriteHashtag, .coreSpriteHeartFull {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -225px -176px
 	}
@@ -1052,7 +1052,7 @@ a:active {
 		background-position: -326px -266px
 	}
 	.coreSpriteHeartOpen, .coreSpriteHeartSmall, .coreSpriteHyperlapse, .coreSpriteInputAccepted {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -75px -292px
 	}
@@ -1066,7 +1066,7 @@ a:active {
 		background-position: -248px -292px
 	}
 	.coreSpriteInputError, .coreSpriteInputRefresh, .coreSpriteInstallBannerLogo, .coreSpriteLeftChevron {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -225px -292px
 	}
@@ -1080,7 +1080,7 @@ a:active {
 		background-position: -224px -218px
 	}
 	.coreSpriteLeftPaginationArrow, .coreSpriteLikeAnimationHeart, .coreSpriteLikeHeartFull, .coreSpriteLikeHeartOpen {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -101px -218px
 	}
@@ -1094,7 +1094,7 @@ a:active {
 		background-position: -276px -266px
 	}
 	.coreSpriteLocation, .coreSpriteLock, .coreSpriteLoggedOutWordmark, .coreSpriteMobileNavActivityActive {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -293px -292px
 	}
@@ -1108,7 +1108,7 @@ a:active {
 		background-position: -25px -292px
 	}
 	.coreSpriteMobileNavActivityInactive, .coreSpriteMobileNavAddPeopleActive, .coreSpriteMobileNavAddPeopleInactive {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -26px -266px
 	}
@@ -1119,7 +1119,7 @@ a:active {
 		background-position: -285px -176px
 	}
 	.coreSpriteMobileNavExploreActive, .coreSpriteMobileNavExploreInactive, .coreSpriteMobileNavHomeActive {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -125px -292px
 	}
@@ -1130,7 +1130,7 @@ a:active {
 		background-position: -175px -292px
 	}
 	.coreSpriteMobileNavHomeInactive, .coreSpriteMobileNavLogo, .coreSpriteMobileNavMenuActive {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -200px -292px
 	}
@@ -1141,7 +1141,7 @@ a:active {
 		background-position: -226px -266px
 	}
 	.coreSpriteMobileNavMenuInactive, .coreSpriteMobileNavProfileActive, .coreSpriteMobileNavProfileInactive {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -101px -266px
 	}
@@ -1152,7 +1152,7 @@ a:active {
 		background-position: -301px -266px
 	}
 	.coreSpriteMobileNavSearchActive, .coreSpriteMobileNavSearchInactive, .coreSpriteMobileNavSettings {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: 0 -292px
 	}
@@ -1163,7 +1163,7 @@ a:active {
 		background-position: -100px -292px
 	}
 	.coreSpriteMobileNavTypeLogo, .coreSpriteNotificationLeftChevron, .coreSpriteNotificationRightChevron {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -121px -176px
 	}
@@ -1174,7 +1174,7 @@ a:active {
 		background-position: -326px -292px
 	}
 	.coreSpriteOptionsEllipsis, .coreSpritePagingChevron, .coreSpritePlayIconSmall, .coreSpriteReload {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -291px -112px
 	}
@@ -1188,7 +1188,7 @@ a:active {
 		background-position: -255px -176px
 	}
 	.coreSpriteRightChevron, .coreSpriteRightPaginationArrow, .coreSpriteSearchClear, .coreSpriteSearchIcon {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -286px -218px
 	}
@@ -1202,7 +1202,7 @@ a:active {
 		background-position: -342px -112px
 	}
 	.coreSpriteSpeechBubbleSmall, .coreSpriteUserTagIndicator, .coreSpriteVerifiedBadge {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -196px -112px
 	}
@@ -1213,7 +1213,7 @@ a:active {
 		background-position: -236px -112px
 	}
 	.coreSpriteVerifiedBadgeSmall, .coreSpriteVideoIconLarge, .coreSpriteVideoIconSmall {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -26px -317px
 	}
@@ -1224,7 +1224,7 @@ a:active {
 		background-position: -255px -218px
 	}
 	.coreSpriteViewCount, .coreSpriteWelcomeDesktop, .coreSpriteWelcomeMobile, .coreSpriteWindowsStoreButton {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -325px -112px
 	}
@@ -1263,6 +1263,60 @@ a:active {
 }
 
 @-webkit-keyframes like-heart-animation {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(0);
+		transform: scale(0)
+	}
+	15%, 70% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1)
+	}
+	to {
+		opacity: 0;
+		-webkit-transform: scale(1);
+		transform: scale(1)
+	}
+}
+
+-webkit-keyframes like-heart-animation {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(0);
+		transform: scale(0)
+	}
+	15%, 70% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1)
+	}
+	to {
+		opacity: 0;
+		-webkit-transform: scale(1);
+		transform: scale(1)
+	}
+}
+
+-webkit-keyframes like-heart-animation {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(0);
+		transform: scale(0)
+	}
+	15%, 70% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1)
+	}
+	to {
+		opacity: 0;
+		-webkit-transform: scale(1);
+		transform: scale(1)
+	}
+}
+
+-webkit-keyframes like-heart-animation {
 	0% {
 		opacity: 0;
 		-webkit-transform: scale(0);
@@ -1502,6 +1556,39 @@ a:active {
 }
 
 @-webkit-keyframes spinner-spin8 {
+	0% {
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg)
+	}
+	to {
+		-webkit-transform: rotate(540deg);
+		transform: rotate(540deg)
+	}
+}
+
+-webkit-keyframes spinner-spin8 {
+	0% {
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg)
+	}
+	to {
+		-webkit-transform: rotate(540deg);
+		transform: rotate(540deg)
+	}
+}
+
+-webkit-keyframes spinner-spin8 {
+	0% {
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg)
+	}
+	to {
+		-webkit-transform: rotate(540deg);
+		transform: rotate(540deg)
+	}
+}
+
+-webkit-keyframes spinner-spin8 {
 	0% {
 		-webkit-transform: rotate(180deg);
 		transform: rotate(180deg)
@@ -2268,7 +2355,7 @@ a._kul9p, a._kul9p:visited {
 }
 
 .videoSpritePlayButton, .videoSpriteSoundOff, .videoSpriteSoundOn {
-	background-image: url(/static/sprites/video/0df868.png);
+	background-image: url(static/sprites/video/0df868.png);
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	height: 135px;
@@ -2287,7 +2374,7 @@ a._kul9p, a._kul9p:visited {
 
 @media (min-device-pixel-ratio:1.5), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
 	.videoSpritePlayButton, .videoSpriteSoundOff, .videoSpriteSoundOn {
-		background-image: url(/static/sprites/video/06390c.png);
+		background-image: url(static/sprites/video/06390c.png);
 		background-size: 152px 135px;
 		background-position: 0 0
 	}
@@ -4243,6 +4330,33 @@ a._kul9p, a._kul9p:visited {
 }
 
 @-webkit-keyframes barprogress {
+	0% {
+		background-position: 0% 0
+	}
+	to {
+		background-position: 125% 0
+	}
+}
+
+-webkit-keyframes barprogress {
+	0% {
+		background-position: 0% 0
+	}
+	to {
+		background-position: 125% 0
+	}
+}
+
+-webkit-keyframes barprogress {
+	0% {
+		background-position: 0% 0
+	}
+	to {
+		background-position: 125% 0
+	}
+}
+
+-webkit-keyframes barprogress {
 	0% {
 		background-position: 0% 0
 	}
@@ -7022,7 +7136,7 @@ body.fb_hidden {
 }
 
 ._fceuw {
-	background-image: url(/static/images/ico/favicon-192.png/b407fa101800.png);
+	background-image: url(static/images/ico/favicon-192.png/b407fa101800.png);
 	background-size: contain;
 	display: block;
 	height: 75px;
@@ -7153,6 +7267,39 @@ a:active {
 	opacity: .5
 }
 @-webkit-keyframes spinner-spin8 {
+	0% {
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg)
+	}
+	to {
+		-webkit-transform: rotate(540deg);
+		transform: rotate(540deg)
+	}
+}
+
+-webkit-keyframes spinner-spin8 {
+	0% {
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg)
+	}
+	to {
+		-webkit-transform: rotate(540deg);
+		transform: rotate(540deg)
+	}
+}
+
+-webkit-keyframes spinner-spin8 {
+	0% {
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg)
+	}
+	to {
+		-webkit-transform: rotate(540deg);
+		transform: rotate(540deg)
+	}
+}
+
+-webkit-keyframes spinner-spin8 {
 	0% {
 		-webkit-transform: rotate(180deg);
 		transform: rotate(180deg)
@@ -7436,7 +7583,7 @@ a:active {
 	color: #3897f0
 }
 .coreSpriteAddPhoto, .coreSpriteAppIcon, .coreSpriteAppStoreButton, .coreSpriteBoomerang {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -94px -53px;
 	height: 80px;
@@ -7462,7 +7609,7 @@ a:active {
 }
 
 .coreSpriteCameraActive, .coreSpriteCameraInactive, .coreSpriteChevronDownGrey, .coreSpriteChevronRight {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -281px -90px;
 	height: 21px;
@@ -7486,7 +7633,7 @@ a:active {
 }
 
 .coreSpriteClose, .coreSpriteComment, .coreSpriteDesktopNavActivity, .coreSpriteDesktopNavExplore {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -355px -94px;
 	height: 20px;
@@ -7508,7 +7655,7 @@ a:active {
 }
 
 .coreSpriteDesktopNavLogoAndWordmark, .coreSpriteDesktopNavProfile, .coreSpriteDismissLarge, .coreSpriteDismissSmall {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -177px 0;
 	height: 35px;
@@ -7534,7 +7681,7 @@ a:active {
 }
 
 .coreSpriteDropdownArrowBlue5, .coreSpriteDropdownArrowBlue6, .coreSpriteDropdownArrowGrey9 {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -211px -115px;
 	height: 6px;
@@ -7550,7 +7697,7 @@ a:active {
 }
 
 .coreSpriteDropdownArrowWhite, .coreSpriteEllipsis, .coreSpriteFacebookIcon, .coreSpriteFacebookIconInverted {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -244px -115px;
 	height: 6px;
@@ -7574,7 +7721,7 @@ a:active {
 }
 
 .coreSpriteGlyphGradient, .coreSpriteGlyphWhite, .coreSpriteGooglePlayButton, .coreSpriteHashtag {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -106px -223px;
 	height: 40px;
@@ -7600,7 +7747,7 @@ a:active {
 }
 
 .coreSpriteHeartFull, .coreSpriteHeartOpen, .coreSpriteHeartSmall, .coreSpriteHyperlapse {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -182px -322px;
 	height: 24px;
@@ -7624,7 +7771,7 @@ a:active {
 }
 
 .coreSpriteInputAccepted, .coreSpriteInputError, .coreSpriteInputRefresh, .coreSpriteInstallBannerLogo {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -355px -24px;
 	height: 22px;
@@ -7647,7 +7794,7 @@ a:active {
 }
 
 .coreSpriteLeftChevron, .coreSpriteLeftPaginationArrow, .coreSpriteLikeAnimationHeart {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -232px -223px;
 	height: 30px;
@@ -7667,7 +7814,7 @@ a:active {
 }
 
 .coreSpriteLikeHeartFull, .coreSpriteLikeHeartOpen, .coreSpriteLocation, .coreSpriteLock, .coreSpriteLoggedOutWordmark {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: 0 -322px;
 	height: 24px;
@@ -7697,7 +7844,7 @@ a:active {
 }
 
 .coreSpriteMobileNavActivityActive, .coreSpriteMobileNavActivityInactive, .coreSpriteMobileNavAddPeopleActive {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -294px -272px;
 	height: 24px;
@@ -7714,7 +7861,7 @@ a:active {
 }
 
 .coreSpriteMobileNavAddPeopleInactive, .coreSpriteMobileNavExploreActive, .coreSpriteMobileNavExploreInactive {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -320px -180px;
 	height: 24px;
@@ -7731,7 +7878,7 @@ a:active {
 }
 
 .coreSpriteMobileNavHomeActive, .coreSpriteMobileNavHomeInactive, .coreSpriteMobileNavLogo, .coreSpriteMobileNavMenuActive {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -286px -322px;
 	height: 24px;
@@ -7755,7 +7902,7 @@ a:active {
 }
 
 .coreSpriteMobileNavMenuInactive, .coreSpriteMobileNavProfileActive, .coreSpriteMobileNavProfileInactive, .coreSpriteMobileNavSearchActive {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -320px -272px;
 	height: 24px;
@@ -7775,7 +7922,7 @@ a:active {
 }
 
 .coreSpriteMobileNavSearchInactive, .coreSpriteMobileNavSettings, .coreSpriteMobileNavTypeLogo, .coreSpriteNotificationLeftChevron {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -138px -272px;
 	height: 24px;
@@ -7799,7 +7946,7 @@ a:active {
 }
 
 .coreSpriteNotificationRightChevron, .coreSpriteOptionsEllipsis, .coreSpritePagingChevron {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -355px -330px;
 	height: 15px;
@@ -7819,7 +7966,7 @@ a:active {
 }
 
 .coreSpritePlayIconSmall, .coreSpriteReload, .coreSpriteRightChevron, .coreSpriteRightPaginationArrow {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -355px -158px;
 	height: 19px;
@@ -7845,7 +7992,7 @@ a:active {
 }
 
 .coreSpriteSearchClear, .coreSpriteSearchIcon, .coreSpriteSidecarIconLarge, .coreSpriteSidecarIconSmall {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -355px -72px;
 	height: 20px;
@@ -7871,7 +8018,7 @@ a:active {
 }
 
 .coreSpriteSpeechBubbleSmall, .coreSpriteUserTagIndicator, .coreSpriteVerifiedBadge {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -355px -116px;
 	height: 19px;
@@ -7891,7 +8038,7 @@ a:active {
 }
 
 .coreSpriteVerifiedBadgeSmall, .coreSpriteVideoIconLarge, .coreSpriteVideoIconSmall {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -337px -90px;
 	height: 12px;
@@ -7911,7 +8058,7 @@ a:active {
 }
 
 .coreSpriteViewCount, .coreSpriteWelcomeDesktop, .coreSpriteWelcomeMobile, .coreSpriteWindowsStoreButton {
-	background-image: url(/static/sprites/core/d21416.png);
+	background-image: url(static/sprites/core/d21416.png);
 	background-repeat: no-repeat;
 	background-position: -355px -312px;
 	height: 16px;
@@ -7938,7 +8085,7 @@ a:active {
 
 @media (min-device-pixel-ratio:1.5), (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi) {
 	.coreSpriteAddPhoto, .coreSpriteAppIcon {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -93px -52px
 	}
@@ -7946,7 +8093,7 @@ a:active {
 		background-position: -183px -218px
 	}
 	.coreSpriteAppStoreButton, .coreSpriteBoomerang, .coreSpriteCameraActive, .coreSpriteCameraInactive {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -131px -134px
 	}
@@ -7960,7 +8107,7 @@ a:active {
 		background-position: -277px -88px
 	}
 	.coreSpriteChevronDownGrey, .coreSpriteChevronRight, .coreSpriteClose, .coreSpriteComment {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -339px -292px
 	}
@@ -7974,7 +8121,7 @@ a:active {
 		background-position: -50px -292px
 	}
 	.coreSpriteDesktopNavActivity, .coreSpriteDesktopNavExplore, .coreSpriteDesktopNavLogoAndWordmark {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -126px -266px
 	}
@@ -7985,7 +8132,7 @@ a:active {
 		background-position: -176px 0
 	}
 	.coreSpriteDesktopNavProfile, .coreSpriteDismissLarge, .coreSpriteDismissSmall, .coreSpriteDropdownArrowBlue5 {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -151px -266px
 	}
@@ -7999,7 +8146,7 @@ a:active {
 		background-position: -142px -206px
 	}
 	.coreSpriteDropdownArrowBlue6, .coreSpriteDropdownArrowGrey9, .coreSpriteDropdownArrowWhite {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -152px -206px
 	}
@@ -8010,7 +8157,7 @@ a:active {
 		background-position: -132px -206px
 	}
 	.coreSpriteEllipsis, .coreSpriteFacebookIcon, .coreSpriteFacebookIconInverted, .coreSpriteGlyphGradient {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -56px -218px
 	}
@@ -8024,7 +8171,7 @@ a:active {
 		background-position: -303px -134px
 	}
 	.coreSpriteGlyphWhite, .coreSpriteGooglePlayButton, .coreSpriteHashtag, .coreSpriteHeartFull {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -225px -176px
 	}
@@ -8038,7 +8185,7 @@ a:active {
 		background-position: -326px -266px
 	}
 	.coreSpriteHeartOpen, .coreSpriteHeartSmall, .coreSpriteHyperlapse, .coreSpriteInputAccepted {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -75px -292px
 	}
@@ -8052,7 +8199,7 @@ a:active {
 		background-position: -248px -292px
 	}
 	.coreSpriteInputError, .coreSpriteInputRefresh, .coreSpriteInstallBannerLogo, .coreSpriteLeftChevron {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -225px -292px
 	}
@@ -8066,7 +8213,7 @@ a:active {
 		background-position: -224px -218px
 	}
 	.coreSpriteLeftPaginationArrow, .coreSpriteLikeAnimationHeart, .coreSpriteLikeHeartFull, .coreSpriteLikeHeartOpen {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -101px -218px
 	}
@@ -8080,7 +8227,7 @@ a:active {
 		background-position: -276px -266px
 	}
 	.coreSpriteLocation, .coreSpriteLock, .coreSpriteLoggedOutWordmark, .coreSpriteMobileNavActivityActive {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -293px -292px
 	}
@@ -8094,7 +8241,7 @@ a:active {
 		background-position: -25px -292px
 	}
 	.coreSpriteMobileNavActivityInactive, .coreSpriteMobileNavAddPeopleActive, .coreSpriteMobileNavAddPeopleInactive {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -26px -266px
 	}
@@ -8105,7 +8252,7 @@ a:active {
 		background-position: -285px -176px
 	}
 	.coreSpriteMobileNavExploreActive, .coreSpriteMobileNavExploreInactive, .coreSpriteMobileNavHomeActive {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -125px -292px
 	}
@@ -8116,7 +8263,7 @@ a:active {
 		background-position: -175px -292px
 	}
 	.coreSpriteMobileNavHomeInactive, .coreSpriteMobileNavLogo, .coreSpriteMobileNavMenuActive {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -200px -292px
 	}
@@ -8127,7 +8274,7 @@ a:active {
 		background-position: -226px -266px
 	}
 	.coreSpriteMobileNavMenuInactive, .coreSpriteMobileNavProfileActive, .coreSpriteMobileNavProfileInactive {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -101px -266px
 	}
@@ -8138,7 +8285,7 @@ a:active {
 		background-position: -301px -266px
 	}
 	.coreSpriteMobileNavSearchActive, .coreSpriteMobileNavSearchInactive, .coreSpriteMobileNavSettings {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: 0 -292px
 	}
@@ -8149,7 +8296,7 @@ a:active {
 		background-position: -100px -292px
 	}
 	.coreSpriteMobileNavTypeLogo, .coreSpriteNotificationLeftChevron, .coreSpriteNotificationRightChevron {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -121px -176px
 	}
@@ -8160,7 +8307,7 @@ a:active {
 		background-position: -326px -292px
 	}
 	.coreSpriteOptionsEllipsis, .coreSpritePagingChevron, .coreSpritePlayIconSmall, .coreSpriteReload {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -291px -112px
 	}
@@ -8174,7 +8321,7 @@ a:active {
 		background-position: -255px -176px
 	}
 	.coreSpriteRightChevron, .coreSpriteRightPaginationArrow, .coreSpriteSearchClear, .coreSpriteSearchIcon {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -286px -218px
 	}
@@ -8188,7 +8335,7 @@ a:active {
 		background-position: -342px -112px
 	}
 	.coreSpriteSpeechBubbleSmall, .coreSpriteUserTagIndicator, .coreSpriteVerifiedBadge {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -196px -112px
 	}
@@ -8199,7 +8346,7 @@ a:active {
 		background-position: -236px -112px
 	}
 	.coreSpriteVerifiedBadgeSmall, .coreSpriteVideoIconLarge, .coreSpriteVideoIconSmall {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -26px -317px
 	}
@@ -8210,7 +8357,7 @@ a:active {
 		background-position: -255px -218px
 	}
 	.coreSpriteViewCount, .coreSpriteWelcomeDesktop, .coreSpriteWelcomeMobile, .coreSpriteWindowsStoreButton {
-		background-image: url(/static/sprites/core/9b46f2.png);
+		background-image: url(static/sprites/core/9b46f2.png);
 		background-size: 352px 338px;
 		background-position: -325px -112px
 	}
@@ -8728,7 +8875,7 @@ a:active {
 	-ms-flex-item-align: center;
 	-ms-grid-row-align: center;
 	align-self: center;
-	background-image: url(/static/images/homepage/home-phones.png/38825c9d5aa2.png);
+	background-image: url(static/images/homepage/home-phones.png/38825c9d5aa2.png);
 	background-position: 0 0;
 	background-size: 454px 618px;
 	-ms-flex-preferred-size: 454px;
@@ -8740,7 +8887,7 @@ a:active {
 
 @media screen and (-webkit-min-device-pixel-ratio:1.5), screen and (min-resolution:1.5dppx) {
 	._fdj9b {
-		background-image: url(/static/images/homepage/home-phones@2x.png/f82c2ede4ccb.png)
+		background-image: url(static/images/homepage/home-phones@2x.png/f82c2ede4ccb.png)
 	}
 }
 
@@ -8800,6 +8947,39 @@ a:active {
 }
 
 @-webkit-keyframes GradientRotation {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg)
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg)
+	}
+}
+
+-webkit-keyframes GradientRotation {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg)
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg)
+	}
+}
+
+-webkit-keyframes GradientRotation {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg)
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg)
+	}
+}
+
+-webkit-keyframes GradientRotation {
 	0% {
 		-webkit-transform: rotate(0deg);
 		transform: rotate(0deg)
@@ -9358,6 +9538,33 @@ a:active {
 	max-width: 360px
 }
 @-webkit-keyframes barprogress {
+	0% {
+		background-position: 0% 0
+	}
+	to {
+		background-position: 125% 0
+	}
+}
+
+-webkit-keyframes barprogress {
+	0% {
+		background-position: 0% 0
+	}
+	to {
+		background-position: 125% 0
+	}
+}
+
+-webkit-keyframes barprogress {
+	0% {
+		background-position: 0% 0
+	}
+	to {
+		background-position: 125% 0
+	}
+}
+
+-webkit-keyframes barprogress {
 	0% {
 		background-position: 0% 0
 	}
@@ -11709,5 +11916,37 @@ body.fb_hidden {
 	left: 50%;
 	z-index: 4
 }
-
+.search-box{
+        width: 300px;
+        position: relative;
+        display: inline-block;
+        font-size: 14px;
+    }
+    .search-box input[type="text"]{
+        height: 32px;
+        padding: 5px 10px;
+        border: 1px solid #CCCCCC;
+        font-size: 14px;
+    }
+    .result{
+        position: absolute;
+        z-index: 999;
+        top: 100%;
+        left: 0;
+    }
+    .search-box input[type="text"], .result{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    /* Formatting result items */
+    .result p{
+        margin: 0;
+        padding: 7px 10px;
+        border: 1px solid #CCCCCC;
+        border-top: none;
+        cursor: pointer;
+    }
+    .result p:hover{
+        background: #f2f2f2;
+    }
 
