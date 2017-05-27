@@ -64,24 +64,30 @@
                   <div class="_qj7yb">
                      <div>
 					<section class="_jveic _dsvln">
-                                <div class="_9f9pr">
-									<article class="_h2d1o _j5hrx _pieko">
-										<form class="_k3t69" action="updateStatus.php" method="POST" ip="formUpload">
-											<input type ="hidden" name ="userID" value="<?php echo $_SESSION["userID"];?>">
-											<input type="text" class="_7uiwk _qy55y" aria-label="Bạn đanng nghĩ gì..." placeholder="Bạn đanng nghĩ gì..." value="" name="caption">
-											<div class="_bm6zw">
-												<!-- react-empty: 741 -->
+							<div class="wrapper">
+								<article class="_h2d1o _j5hrx _pieko">
+										<form action="updateStatus.php" method="POST" enctype="multipart/form-data">
+											<header class="_s6yvg">
+													<input type ="hidden" name ="userID" value="<?php echo $_SESSION["userID"];?>">
+													<input type="text" class="_7uiwk _qy55y" aria-label="Bạn đanng nghĩ gì..." placeholder="Bạn đanng nghĩ gì..." value="" name="caption">
+													<div class="_bm6zw">
+														<!-- react-empty: 741 -->
+													</div>
+													<input type="submit" value="Đăng bài">
+											</header>
+											<div>
+												<div class="_9f9pr">
+													<div class="browse-wrap">
+														<input id="fileUpload" type="file" name="fileToUpload"  id="fileToUpload">
+														<div id="image-holder"></div>
+													</div>
+												</div>
 											</div>
-											<div class="browse-wrap">
-												<div class="title">Choose a file to upload</div>
-												<input type="file" name="upload" class="upload" title="Choose a file to upload">
-											</div>
-											<span class="upload-path"></span>
 										</form>
-									</article>
-								</div>
+								</article>
+							</div>
                     </section>
-					 <div class="wrapper">
+						<div class="wrapper">
 							<ul id="results"><!-- results appear here --></ul>
 							<div class="_sgy7u">
 								<div class="_jf5s3 _c7qti"></div>
@@ -127,7 +133,7 @@
                         <li class="_fw3ds"><a href="https://www.instagram.com/explore/locations/">Thư mục</a></li>
                      </ul>
                   </nav>
-                  <span class="_es4h6">© <?php echo date('YYYY');?> Instagram</span>
+                  <span class="_es4h6">© <?php echo date('Y');?> Instagram</span>
                </div>
             </footer>
             <!-- react-empty: 967 -->
@@ -170,18 +176,39 @@
 			}
 		}
 		</script>
-		<script type="text/javascript">
-			var span = document.getElementsByClassName('upload-path');
-			// Button
-			var uploader = document.getElementsByName('upload');
-			// On change
-			for( item in uploader ) {
-			  // Detect changes
-			  uploader[item].onchange = function() {
-				// Echo filename in span
-				span[0].innerHTML = this.files[0].name;
-			  }
-			}
+		<script>
+		$(document).ready(function() {
+				$("#fileUpload").on('change', function() {
+				  //Get count of selected files
+				  var countFiles = $(this)[0].files.length;
+				  var imgPath = $(this)[0].value;
+				  var extn = imgPath.substring(imgPath.lastIndexOf('.') + 1).toLowerCase();
+				  var image_holder = $("#image-holder");
+				  image_holder.empty();
+				  if (extn == "gif" || extn == "png" || extn == "jpg" || extn == "jpeg") {
+					if (typeof(FileReader) != "undefined") {
+					  //loop for each file selected for uploaded.
+					  for (var i = 0; i < countFiles; i++) 
+					  {
+						var reader = new FileReader();
+						reader.onload = function(e) {
+						  $("<img />", {
+							"src": e.target.result,
+							"class": "thumb-image _icyx7"
+						  }).appendTo(image_holder);
+						}
+						$("#image-holder").addClass('_jjzlb');
+						image_holder.show();
+						reader.readAsDataURL($(this)[0].files[i]);
+					  }
+					} else {
+					  //alert("This browser does not support FileReader.");
+					}
+				  } else {
+					//alert("Pls select only images");
+				  }
+				});
+			  });
 		</script>
    </body>
 </html>

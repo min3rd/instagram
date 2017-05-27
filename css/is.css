@@ -6632,7 +6632,7 @@ a._71bsb, a._71bsb:visited {
 }
 
 .fb_dialog_close_icon {
-	background: url(http://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;
+	background: url(http:static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;
 	cursor: pointer;
 	display: block;
 	height: 15px;
@@ -6656,11 +6656,11 @@ a._71bsb, a._71bsb:visited {
 }
 
 .fb_dialog_close_icon:hover {
-	background: url(http://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent
+	background: url(http:static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent
 }
 
 .fb_dialog_close_icon:active {
-	background: url(http://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent
+	background: url(http:static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent
 }
 
 .fb_dialog_loader {
@@ -6678,25 +6678,25 @@ a._71bsb, a._71bsb:visited {
 }
 
 .fb_dialog_top_left {
-	background: url(http://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;
+	background: url(http:static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;
 	left: -10px;
 	top: -10px
 }
 
 .fb_dialog_top_right {
-	background: url(http://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;
+	background: url(http:static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;
 	right: -10px;
 	top: -10px
 }
 
 .fb_dialog_bottom_left {
-	background: url(http://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;
+	background: url(http:static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;
 	bottom: -10px;
 	left: -10px
 }
 
 .fb_dialog_bottom_right {
-	background: url(http://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;
+	background: url(http:static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;
 	right: -10px;
 	bottom: -10px
 }
@@ -6750,7 +6750,7 @@ a._71bsb, a._71bsb:visited {
 }
 
 .fb_dialog_content .dialog_title>span {
-	background: url(http://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;
+	background: url(http:static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;
 	float: left;
 	padding: 5px 0 7px 26px
 }
@@ -6767,7 +6767,7 @@ body.fb_hidden {
 }
 
 .fb_dialog.fb_dialog_mobile.loading {
-	background: url(http://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;
+	background: url(http:static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;
 	min-height: 100%;
 	min-width: 100%;
 	overflow: hidden;
@@ -6889,7 +6889,7 @@ body.fb_hidden {
 }
 
 .fb_dialog_content .dialog_content {
-	background: url(http://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;
+	background: url(http:static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;
 	border: 1px solid #555;
 	border-bottom: 0;
 	border-top: 0;
@@ -6918,7 +6918,7 @@ body.fb_hidden {
 #fb_dialog_loader_spinner {
 	animation: rotateSpinner 1.2s linear infinite;
 	background-color: transparent;
-	background-image: url(http://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);
+	background-image: url(http:static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	height: 24px;
@@ -6987,7 +6987,7 @@ body.fb_hidden {
 }
 
 .fb_iframe_widget_loader .FB_Loader {
-	background: url(http://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;
+	background: url(http:static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;
 	height: 32px;
 	width: 32px;
 	margin-left: -16px;
@@ -11346,7 +11346,7 @@ a._71bsb, a._71bsb:visited {
 }
 
 .fb_dialog_close_icon {
-	background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;
+	background: url(https:static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;
 	cursor: pointer;
 	display: block;
 	height: 15px;
@@ -11370,11 +11370,11 @@ a._71bsb, a._71bsb:visited {
 }
 
 .fb_dialog_close_icon:hover {
-	background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent
+	background: url(https:static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent
 }
 
 .fb_dialog_close_icon:active {
-	background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent
+	background: url(https:static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent
 }
 
 .fb_dialog_loader {
@@ -11392,25 +11392,25 @@ a._71bsb, a._71bsb:visited {
 }
 
 .fb_dialog_top_left {
-	background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;
+	background: url(https:static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;
 	left: -10px;
 	top: -10px
 }
 
 .fb_dialog_top_right {
-	background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;
+	background: url(https:static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;
 	right: -10px;
 	top: -10px
 }
 
 .fb_dialog_bottom_left {
-	background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;
+	background: url(https:static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;
 	bottom: -10px;
 	left: -10px
 }
 
 .fb_dialog_bottom_right {
-	background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;
+	background: url(https:static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;
 	right: -10px;
 	bottom: -10px
 }
@@ -11464,7 +11464,7 @@ a._71bsb, a._71bsb:visited {
 }
 
 .fb_dialog_content .dialog_title>span {
-	background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;
+	background: url(https:static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;
 	float: left;
 	padding: 5px 0 7px 26px
 }
@@ -11481,7 +11481,7 @@ body.fb_hidden {
 }
 
 .fb_dialog.fb_dialog_mobile.loading {
-	background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;
+	background: url(https:static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;
 	min-height: 100%;
 	min-width: 100%;
 	overflow: hidden;
@@ -11603,7 +11603,7 @@ body.fb_hidden {
 }
 
 .fb_dialog_content .dialog_content {
-	background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;
+	background: url(https:static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;
 	border: 1px solid #555;
 	border-bottom: 0;
 	border-top: 0;
@@ -11632,7 +11632,7 @@ body.fb_hidden {
 #fb_dialog_loader_spinner {
 	animation: rotateSpinner 1.2s linear infinite;
 	background-color: transparent;
-	background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);
+	background-image: url(https:static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	height: 24px;
@@ -11701,7 +11701,7 @@ body.fb_hidden {
 }
 
 .fb_iframe_widget_loader .FB_Loader {
-	background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;
+	background: url(https:static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;
 	height: 32px;
 	width: 32px;
 	margin-left: -16px;

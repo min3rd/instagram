@@ -29,11 +29,31 @@ $post->bind_result($postID, $userID, $time,$mediaPath,$caption); //bind variable
 while($post->fetch()){ //fetch values
     // day la doan div bai viet. gom nguoi dang, caption, so luot like, anh,...
 	// timePost so sánh timeCurrent 
-	$timePost	= $time;
-	$timeReply	= date('d/m/Y H:i:s');
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "instagram";
 
-	$datePost	= date_parse_from_format('d/m/Y H:i:s', $timePost);
-	$dateReply	= date_parse_from_format('d/m/Y H:i:s', $timeReply);
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	$sql = "SELECT * FROM user WHERE userID = ".$userID;
+	//Tim nguoi dang bai
+	$user = $conn->query($sql);
+	$row = $user->fetch_assoc();
+	//Tim so luong like cua bai viet
+	$sql = "SELECT * FROM liked WHERE postID = ".$postID;
+	$like = $conn->query($sql);
+	
+	//Tim comment
+	$sql = "SELECT * FROM comment WHERE postID = ".$postID;
+	$comment = $conn->query($sql);
+	
+	//Ham tinh thoi gian dang bai
+	$timePost	= $time;
+	$timeReply	= date('Y/m/d H:i:s');
+
+	$datePost	= date_parse_from_format('Y/m/d H:i:s', $timePost);
+	$dateReply	= date_parse_from_format('Y/m/d H:i:s', $timeReply);
 
 	$tsPost		= mktime($datePost['hour'], $datePost['minute'], $datePost['second'], $datePost['month'], $datePost['day'], $datePost['year']);
 	$tsReply	= mktime($dateReply['hour'], $dateReply['minute'], $dateReply['second'], $dateReply['month'], $dateReply['day'], $dateReply['year']);
@@ -66,9 +86,9 @@ while($post->fetch()){ //fetch values
 	}
 	echo '<article class="_h2d1o _j5hrx _pieko">';
 	echo '<header class="_s6yvg">';
-	echo '<a class="_5lote _pss4f _vbtk2" href="'.'" style="width: 30px; height: 30px;"><img class="_a012k" src="'.'"></a>';
+	echo '<a class="_5lote _pss4f _vbtk2" href="'.'" style="width: 30px; height: 30px;"><img class="_a012k" src="'.$row["mediaPath"].'"></a>';
 	echo '<div class="_dzy0a">';
-	echo '<a class="_4zhc5 notranslate _ook48" title="'.$userID.'" href="'.'">'.'</a>';
+	echo '<a class="_4zhc5 notranslate _ook48" title="'.$userID.'" href="'.'">'.$row["username"].'</a>';
 	echo '<div class="_bm6zw">
 				<!-- react-empty: 741 -->
 					</div>
@@ -80,7 +100,7 @@ while($post->fetch()){ //fetch values
 	echo 	'<div class="_9f9pr">';
 	echo 		'<div>';
 	echo 			'<div class="_22yr2 _e0mru">';
-	echo				'<div class="_jjzlb" style="padding-bottom: 100%;"><img alt="@'.$userID.'" class="_icyx7" id="pImage_10" src="'.$mediaPath.'"></div>';
+	echo				'<div class="_jjzlb" style="padding-bottom: 100%;"><img alt="@'.$row["username"].'" class="_icyx7" id="pImage_10" src="'.$mediaPath.'"></div>';
 	echo	'
 							<!-- react-empty: 750 -->
 						   <div class="_ovg3g"></div>
@@ -93,28 +113,44 @@ while($post->fetch()){ //fetch values
                               <section class="_tfkbw _hpiil">
                                  <div class="_iuf51 _oajsw">
                                     <span class="_tf9x3">
-                                       <!-- react-text: 777 --><!-- /react-text --><span>317,631</span><!-- react-text: 779 --> lượt thích<!-- /react-text -->
+                                       <!-- react-text: 777 --><!-- /react-text --><span>'.$like->num_rows.'</span><!-- react-text: 779 --> lượt thích<!-- /react-text -->
                                     </span>
                                  </div>
                               </section>
                               <ul class="_mo9iw _pnraw">
                                  <li class="_nk46a">
-                                    <h1><a class="_4zhc5 notranslate _iqaka" title="xxxibgdrgn" href="https://www.instagram.com/xxxibgdrgn/">xxxibgdrgn</a><span><a class="notranslate" href="https://www.instagram.com/peaceminusonedotcom/">@peaceminusonedotcom</a></span></h1>
-                                 </li>
-                                 <li class="_nk46a"><button class="_l086v _ifrvy">tải thêm bình luận</button></li>
-                                 <li class="_nk46a"><a class="_4zhc5 notranslate _iqaka" title="cyhg1301" href="https://www.instagram.com/cyhg1301/">cyhg1301</a><span><span>😊</span></span></li>
-                                 <li class="_nk46a"><a class="_4zhc5 notranslate _iqaka" title="quanshijiezhiyouke" href="https://www.instagram.com/quanshijiezhiyouke/">quanshijiezhiyouke</a><span><span>各种夹子</span></span></li>
-                                 <li class="_nk46a"><a class="_4zhc5 notranslate _iqaka" title="phuongdeip" href="https://www.instagram.com/phuongdeip/">phuongdeip</a><span><a href="https://www.instagram.com/explore/tags/pink/">#Pink</a><span> </span><a href="https://www.instagram.com/explore/tags/blue/">#blue</a><span> </span><a href="https://www.instagram.com/explore/tags/green/">#green</a><span> my color</span></span></li>
-                                 <li class="_nk46a"><a class="_4zhc5 notranslate _iqaka" title="lailafatmalaa" href="https://www.instagram.com/lailafatmalaa/">lailafatmalaa</a><span><span>🙄</span></span></li>
-                              </ul>
-                              <section class="_jveic _dsvln">
-                                 <a class="_ebwb5 _1tv0k" href="https://www.instagram.com/#" role="button" aria-disabled="false"><span class="_soakw coreSpriteHeartFull">Bỏ thích</span></a>
-                                 <form class="_k3t69"><input type="text" class="_7uiwk _qy55y" aria-label="Thêm bình luận…" placeholder="Thêm bình luận…" value=""></form>
-                                 <button class="_9q0pi coreSpriteEllipsis _soakw">Tùy chọn khác</button>
-                              </section>
-                           </div>
-		';
+                                    <h1><a class="_4zhc5 notranslate _iqaka" title="'.$row["username"].'" href="profile.php/?username='.$row["username"].'">'.$row["username"].'</a><span>'.$caption.'</span></h1>
+                                 </li>';
+								 if ($comment->num_rows > 0) {
+									// output data of each row
+									while($row = $comment->fetch_assoc()) {
+										$servername2 = "localhost";
+										$username2 = "root";
+										$password2 = "";
+										$dbname2 = "instagram";
+
+										// Create connection
+										$conn2 = new mysqli($servername2, $username2, $password2, $dbname2);
+										$sql2 = "SELECT * FROM user WHERE userID = ".$row["userID"];
+										//Tim nguoi dang bai
+										$user2 = $conn2->query($sql2);
+										$row2 = $user2->fetch_assoc();
+										echo '<li class="_nk46a"><a class="_4zhc5 notranslate _iqaka" title="'.$row2["username"].'" href="profile.php/?username='.$row2["username"].'">'.$row2["username"].'</a><span><span>'.$row["comment"].'</span></span></li>';
+										$conn2->close();
+									}
+								}
+	echo '
+								 <!--<li class="_nk46a"><button class="_l086v _ifrvy">tải thêm bình luận</button></li>-->
+							  </ul>
+							  <section class="_jveic _dsvln">
+								 <a class="_ebwb5 _1tv0k" href="https://www.instagram.com/#" role="button" aria-disabled="true"><span class="_soakw coreSpriteHeartFull">Bỏ thích</span></a>
+								 <form class="_k3t69"><input type="text" class="_7uiwk _qy55y" aria-label="Thêm bình luận…" placeholder="Thêm bình luận…" value=""></form>
+								 <button class="_9q0pi coreSpriteEllipsis _soakw">Tùy chọn khác</button>
+							  </section>
+							</div>
+							';
 	
 	echo '</article>';
+	$conn->close();
 }
 ?>
