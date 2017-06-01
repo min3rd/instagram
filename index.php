@@ -1,8 +1,18 @@
 <?php
+	include("config.inc.php");
 	session_start();
-	if($_SESSION["userID"] == NULL){
-		header("Location: login.php");
+	if($_SESSION["userID"] == null){
+		header("Location: login.php");	
+	}else{
+		$rs = $mysqli->query('SELECT * FROM user WHERE userID = "'.$_SESSION["userID"].'"');
+		if ($rs->num_rows > 0) {
+			
+		} else {
+			session_destroy();
+			header("Location: login.php");
+		}
 	}
+	
 ?>
 <html lang="vi" class="js logged-in ">
 <head>
@@ -24,7 +34,7 @@
             //khi thực hiện kích vào nút Login
             submit.click(function () {
                 //khai báo các biến
-                var userID = $("input[name='userID']").val(); //lấy giá trị input tài khoản
+                var userID = $("input[name='userIDupload']").val(); //lấy giá trị input tài khoản
                 var caption = $("input[name='caption']").val(); //lấy giá trị input mật khẩu
                 var image = $("input[name='upload']").val();
 
@@ -80,18 +90,18 @@
                     <div class="_qj7yb">
                         <div>
                             <div class="wrapper">
-                                <article class="_h2d1o _j5hrx _pieko">
+                                <article class="_h2d1o _j5hrx _pieko  _es1du _rgrbt" style="margin-bottom: 50px">
                                     <form action="updateStatus.php" method="POST" enctype="multipart/form-data">
                                         <header class="_s6yvg">
-                                            <input type="hidden" name="userID" value="<?php echo $_SESSION[" userID"];?>">
+                                            <input type="hidden" name="userIDupload" value="<?php echo $_SESSION["userID"];?>">
                                             <input type="text" class="_7uiwk _qy55y" aria-label="Bạn đang nghĩ gì..." placeholder="Bạn đang nghĩ gì..." value="" name="caption">
                                             <div class="_bm6zw">
                                                 <!-- react-empty: 741 -->
                                             </div>
-                                            <input class="btn" type="submit" value="Đăng">
+                                            <input class="_9q0pi " style="border-style: solid;" type="submit" value="Đăng">
                                         </header>
                                         <div>
-                                            <input id="fileUpload" type="file" name="fileToUpload" id="fileToUpload">
+                                            <input id="fileUpload" class="_7uiwk _qy55y" type="file" name="fileToUpload" id="fileToUpload">
                                             <div id="image-holder"></div>
 
                                         </div>
@@ -100,9 +110,7 @@
                             </div>
                             <div class="wrapper">
                                 <ul id="results"><!-- results appear here --></ul>
-                                <div class="_sgy7u">
-                                    <div class="_jf5s3 _c7qti"></div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -113,7 +121,7 @@
                     <div class="_6v8vp">
                         <div class="_df358">
                             <div class="_jha5b">
-                                <div class="_om391"><a class="_1b8in _soakw coreSpriteDesktopNavLogoAndWordmark" href="index.php">Instagram</a></div>
+                                <div class="_om391"><a class="_1b8in _soakw coreSpriteMobileNavHomeActive" href="index.php">Instagram</a></div>
                             </div>
                             <div class="_9pxkq _icv3j">
                                 <div class="search-box">
@@ -123,9 +131,9 @@
                             </div>
                             <div class="_nhei4">
                                 <div class="_pq5am">
-                                    <div class="_7smet"><a class="_soakw _vbtk2 coreSpriteDesktopNavExplore" href="search.php">Tìm người</a></div>
-                                    <div class="_7smet"><a href="https://www.instagram.com/#" class="_im3et _vbtk2 coreSpriteDesktopNavActivity"><span class="_soakw"></span></a></div>
-                                    <div class="_7smet"><a class="_soakw _vbtk2 coreSpriteDesktopNavProfile" href="profile.php/?userID=<?php $SESSION[" userID"]?>">Trang cá nhân</a></div>
+                                    <div class="_7smet"><a class="_soakw _vbtk2 coreSpriteMobileNavSearchInactive" href="search.php">Tìm người</a></div>
+                                    <div class="_7smet"><a href="#" class="_im3et _vbtk2 coreSpriteDesktopNavActivity"><span class="_soakw"></span></a></div>
+                                    <div class="_7smet"><a class="_soakw _vbtk2 coreSpriteDesktopNavProfile" href="profile.php?userID=<?php echo $_SESSION["userID"]?>">Trang cá nhân</a></div>
                                 </div>
                             </div>
                         </div>
@@ -136,15 +144,15 @@
                 <div class="_mhrsk _np0yb" style="max-width: 600px;">
                     <nav class="_p1gbi" role="navigation">
                         <ul class="_fh0f2">
-                            <li class="_fw3ds"><a href="https://www.instagram.com/about/us/">Giới thiệu về chúng tôi</a></li>
-                            <li class="_fw3ds"><a href="https://help.instagram.com/">Hỗ trợ</a></li>
-                            <li class="_fw3ds"><a href="http://blog.instagram.com/">Blog</a></li>
-                            <li class="_fw3ds"><a href="https://instagram-press.com/">Báo chí</a></li>
-                            <li class="_fw3ds"><a href="https://www.instagram.com/developer/">API</a></li>
-                            <li class="_fw3ds"><a href="https://www.instagram.com/about/jobs/">Việc làm</a></li>
-                            <li class="_fw3ds"><a href="https://www.instagram.com/legal/privacy/">Quyền riêng tư</a></li>
-                            <li class="_fw3ds"><a href="https://www.instagram.com/legal/terms/">Điều khoản</a></li>
-                            <li class="_fw3ds"><a href="https://www.instagram.com/explore/locations/">Thư mục</a></li>
+                            <li class="_fw3ds"><a href="#">Giới thiệu về chúng tôi</a></li>
+                            <li class="_fw3ds"><a href="#">Hỗ trợ</a></li>
+                            <li class="_fw3ds"><a href="#">Blog</a></li>
+                            <li class="_fw3ds"><a href="#">Báo chí</a></li>
+                            <li class="_fw3ds"><a href="#">API</a></li>
+                            <li class="_fw3ds"><a href="#">Việc làm</a></li>
+                            <li class="_fw3ds"><a href="#">Quyền riêng tư</a></li>
+                            <li class="_fw3ds"><a href="#">Điều khoản</a></li>
+                            <li class="_fw3ds"><a href="">Thư mục</a></li>
                         </ul>
                     </nav>
                     <span class="_es4h6">© <?php echo date('Y');?> Instagram</span>
@@ -276,26 +284,4 @@
         }
     </script>
 </body>
-<style>
-    .btn {
-        background: #000000;
-        background-image: -webkit-linear-gradient(top, #000000, #000000);
-        background-image: -moz-linear-gradient(top, #000000, #000000);
-        background-image: -ms-linear-gradient(top, #000000, #000000);
-        background-image: -o-linear-gradient(top, #000000, #000000);
-        background-image: linear-gradient(to bottom, #000000, #000000);
-        -webkit-border-radius: 28;
-        -moz-border-radius: 28;
-        border-radius: 28px;
-        font-family: Arial;
-        color: #ffffff;
-        font-size: 13px;
-        padding: 3px 10px 5px 12px;
-        text-decoration: none;
-    }
-
-        .btn:hover {
-            text-decoration: none;
-        }
-</style>
 </html>

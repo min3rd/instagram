@@ -11917,7 +11917,6 @@ body.fb_hidden {
 	z-index: 4
 }
 .search-box{
-        width: 300px;
         position: relative;
         display: inline-block;
         font-size: 14px;
@@ -11947,6 +11946,38 @@ body.fb_hidden {
         cursor: pointer;
     }
     .result p:hover{
+        background: #f2f2f2;
+    }
+.search-box-email{
+        position: relative;
+        display: inline-block;
+        font-size: 14px;
+    }
+    .search-box-email input[type="email"]{
+        height: 32px;
+        padding: 5px 10px;
+        border: 1px solid #CCCCCC;
+        font-size: 14px;
+    }
+    .result-email{
+        position: absolute;
+        z-index: 999;
+        top: 100%;
+        left: 0;
+    }
+    .search-box-email input[type="email"], .result-email{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    /* Formatting result items */
+    .result-email p{
+        margin: 0;
+        padding: 7px 10px;
+        border: 1px solid #CCCCCC;
+        border-top: none;
+        cursor: pointer;
+    }
+    .result-email p:hover{
         background: #f2f2f2;
     }
 

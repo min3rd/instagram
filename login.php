@@ -21,7 +21,7 @@
                 <main class="_6ltyr _rnpza" role="main">
                     <article class="_60k3m">
                         <div class="_fdj9b _3mng4">
-                            <div class="_klk8w"><img class="_9gpks _5n966" src="./Instagram_files/aafd8c6b005d.jpg"><img class="_9gpks _mpbzm" src="./Instagram_files/2d9d7248af43.jpg"><img class="_9gpks" src="./Instagram_files/629d23a3c7b2.jpg"><img class="_9gpks" src="./Instagram_files/001bc33056c1.jpg"><img class="_9gpks" src="./Instagram_files/f5ae123ab1e2.jpg"></div>
+                            <div class="_klk8w"><img class="_9gpks _5n966" src="files/aafd8c6b005d.jpg"><img class="_9gpks _mpbzm" src="files/2d9d7248af43.jpg"><img class="_9gpks" src="files/629d23a3c7b2.jpg"><img class="_9gpks" src="files/001bc33056c1.jpg"><img class="_9gpks" src="files/f5ae123ab1e2.jpg"></div>
                         </div>
                         <div class="_p8ymb">
                             <div class="_nvyyp">
@@ -29,6 +29,15 @@
                                 <div class="_uikn3">
                                     <!-- react-text: 123 --><!-- /react-text --><!-- react-text: 124 --><!-- /react-text -->
                                     <form class="_rwf8p" action="checkLogin.php" method="GET">
+										<?php
+											if($_GET){
+												if($_GET["error"] == "failed"){
+													echo '<div class="_ccek6 _i31zu">';
+												echo 'Tài khoản hoặc mật khẩu không chính xác';
+												echo '</div>';
+												}
+											}
+										?>
                                         <div class="_ccek6 _i31zu"><input type="text" class="_kp5f7 _qy55y" aria-describedby="" aria-label="Tên người dùng" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="30" name="username" placeholder="Tên người dùng"></div>
                                         <div class="_ccek6 _i31zu">
                                             <input type="password" class="_kp5f7 _qy55y" aria-describedby="" aria-label="Mật khẩu" aria-required="true" autocapitalize="off" autocorrect="off" name="password" placeholder="Mật khẩu">

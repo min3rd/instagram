@@ -148,7 +148,7 @@ while($post->fetch()){ //fetch values
 									}
 								}
 	echo '
-								 <!--<li class="_nk46a"><button class="_l086v _ifrvy">tải thêm bình luận</button></li>-->
+								 <li class="_nk46a"><a href="postDetail.php"><button class="_l086v _ifrvy">tải thêm bình luận</button></a></li>
 							  </ul>
 							  <section class="_jveic _dsvln">
 								 <a class="_ebwb5 _1tv0k" href="like.php?postID='.$postID.'" role="button" aria-disabled="true"><span class="_soakw ';
@@ -161,8 +161,9 @@ while($post->fetch()){ //fetch values
 								
 								 <form class="_k3t69" action = "comment.php" method="GET">
 								 <input type="hidden" name="postID" value="'.$postID.'">
-								 <input type="text" class="_7uiwk _qy55y" aria-label="Thêm bình luận…" placeholder="Thêm bình luận…" value="" name="comment"></form>
-								 <button class="_9q0pi coreSpriteEllipsis _soakw">Tùy chọn khác</button>
+								 <input type="text" class="_7uiwk _qy55y" aria-label="Thêm bình luận…" placeholder="Thêm bình luận…" value="" name="comment">
+								 <input class="_9q0pi" type="submit" id="comment">
+								 </form>
 							  </section>
 							</div>
 							';

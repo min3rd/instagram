@@ -15,24 +15,84 @@
     <meta name="theme-color" content="#000000">
     <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="css/is.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.search-box input[type="text"]').on("keyup input", function () {
+                /* Get input value on change */
+                var inputVal = $(this).val();
+                var resultDropdown = $(this).siblings(".result");
+                if (inputVal.length) {
+                    $.get("checkIsExist.php", { term: inputVal }).done(function (data) {
+                        // Display the returned data in browser
+                        resultDropdown.html(data);
+                    });
+                } else {
+                    resultDropdown.empty();
+                }
+            });
+
+            // Set search input value on click of result item
+            $(document).on("click", ".result p", function () {
+                $(this).parents(".search-box").find('input[type="text"]').val($(this).text());
+                $(this).parent(".result").empty();
+            });
+        });
+    </script>
+	<script type="text/javascript">
+        $(document).ready(function () {
+            $('.search-box-email input[type="email"]').on("keyup input", function () {
+                /* Get input value on change */
+                var inputVal = $(this).val();
+                var resultDropdown = $(this).siblings(".result-email");
+                if (inputVal.length) {
+                    $.get("checkIsExistE.php", { term: inputVal }).done(function (data) {
+                        // Display the returned data in browser
+                        resultDropdown.html(data);
+                    });
+                } else {
+                    resultDropdown.empty();
+                }
+            });
+
+            // Set search input value on click of result item
+            $(document).on("click", ".result-email p", function () {
+                $(this).parents(".search-box-email").find('input[type="email"]').val($(this).text());
+                $(this).parent(".result-email").empty();
+            });
+        });
+    </script>
     <body class="">
         <span id="react-root">
             <section data-reactroot="" class="_8f735">
                 <main class="_6ltyr _rnpza" role="main">
                     <article class="_60k3m">
                         <div class="_fdj9b _3mng4">
-                            <div class="_klk8w"><img class="_9gpks _5n966" src="./Instagram_files/aafd8c6b005d.jpg"><img class="_9gpks _mpbzm" src="./Instagram_files/2d9d7248af43.jpg"><img class="_9gpks" src="./Instagram_files/629d23a3c7b2.jpg"><img class="_9gpks" src="./Instagram_files/001bc33056c1.jpg"><img class="_9gpks" src="./Instagram_files/f5ae123ab1e2.jpg"></div>
+                            <div class="_klk8w"><img class="_9gpks _5n966" src="files/aafd8c6b005d.jpg"><img class="_9gpks _mpbzm" src="files/2d9d7248af43.jpg"><img class="_9gpks" src="files/629d23a3c7b2.jpg"><img class="_9gpks" src="files/001bc33056c1.jpg"><img class="_9gpks" src="files/f5ae123ab1e2.jpg"></div>
                         </div>
                         <div class="_p8ymb">
                             <div class="_nvyyp">
                                 <h1 class="_du7bh _soakw coreSpriteLoggedOutWordmark">Instagram</h1>
                                 <div class="_uikn3">
                                     <!-- react-text: 123 --><!-- /react-text --><!-- react-text: 124 --><!-- /react-text -->
-                                    <form class="_rwf8p" action="checkLogin.php" method="GET">
-                                        <div class="_ccek6 _i31zu"><input type="text" class="_kp5f7 _qy55y" aria-describedby="" aria-label="Tên người dùng" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="30" name="username" placeholder="Tên người dùng"></div>
+                                    <form class="_rwf8p" action="signupForm.php" method="POST">
+										<?php
+											if($_GET){
+												if($_GET['error'] == "isExist"){
+													echo '<div class="_ccek6 _i31zu">';
+													echo 'Tài khoản hoặc Email đã được sử dụng';
+													echo '</div>';
+												}
+											}
+										?>
+                                        <div class="_ccek6 _i31zu search-box"><input type="text" class="_kp5f7 _qy55y" aria-describedby="" aria-label="Tên người dùng" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="30" name="username" placeholder="Tên người dùng">
+											<div class="result"></div>
+										</div>
                                         <div class="_ccek6 _i31zu"><input type="text" class="_kp5f7 _qy55y" aria-describedby="" aria-label="Biệt danh" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="30" name="fullname" placeholder="Biệt danh"></div>
-                                        <div class="_ccek6 _i31zu"><input type="text" class="_kp5f7 _qy55y" aria-describedby="" aria-label="Email" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="30" name="email" placeholder="Email"></div>
-                                        <div class="_ccek6 _i31zu">
+										<div class="_ccek6 _i31zu search-box-email"><input type="email" class="_kp5f7 _qy55y" aria-describedby="" aria-label="Email" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="30" name="email" placeholder="Email">
+											<div class="result-email"></div>
+										</div>
+										<div class="_ccek6 _i31zu">
                                             <input type="password" class="_kp5f7 _qy55y" aria-describedby="" aria-label="Mật khẩu" aria-required="true" autocapitalize="off" autocorrect="off" name="password" placeholder="Mật khẩu">
                                             <!--<div class="_j4ox0"><a class="_19gtn" href="https://www.instagram.com/accounts/password/reset/">Quên?</a></div>-->
                                         </div>
