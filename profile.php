@@ -1,15 +1,28 @@
-<!DOCTYPE html>
-<!-- saved from url=(0035)https://www.instagram.com/9melodyy/ -->
+<?php
+	include("config.inc.php");
+	session_start();
+	if($_SESSION["userID"] == null){
+		header("Location: login.php");	
+	}else{
+		$rs = $mysqli->query('SELECT * FROM user WHERE userID = "'.$_SESSION["userID"].'"');
+		if ($rs->num_rows > 0) {
+			
+		} else {
+			session_destroy();
+			header("Location: login.php");
+		}
+	}
+?>
 <html lang="vi" class="js logged-in ">
-   <!--<![endif]-->
-   <head>
+<head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>9 Melody (@9melodyy) • Ảnh và video trên Instagram</title>
+      <title>Instagram</title>
       <meta name="robots" content="noimageindex">
       <meta name="mobile-web-app-capable" content="yes">
       <meta name="theme-color" content="#000000">
       <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	  <link rel="stylesheet" type="text/css" href="css/is.css">	
       <style type="text/css" data-isostyle-id="is78565832">._okmo7{margin-right:8px}._okmo7:last-child{margin-right:0}._t5w1b{height:40px}</style>
       <style type="text/css" data-isostyle-id="is-5d70a456">._q605d{background-color:#fff;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:76px;width:100%}._fceuw{background-image:url(/static/images/ico/favicon-192.png/b407fa101800.png);background-size:contain;display:block;height:75px;width:75px}._ti7fv{color:#262626;margin:28px 0;max-width:230px;text-align:center}._deto7{font-size:20px}._onmy2{font-size:12px;line-height:16px;margin-top:8px}._cumwc,._cumwc:visited{background-color:#3897f0;border-radius:3px;color:#fff;display:block;font-size:16px;margin:0 0 8px;padding:8px 32px;text-align:center}._mifyj,._mifyj:visited{background-color:transparent;color:#999}</style>
       <style type="text/css" data-isostyle-id="is67db5438">._4zhc5{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-left:5px;margin-left:-5px}</style>
@@ -23,7 +36,7 @@
       <style type="text/css" data-isostyle-id="is-206ca609">._d29kr{-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;padding:12px 30px}._fxaov{background:0 0;border:none;cursor:pointer;height:25px;outline:none;overflow:hidden;padding:0;position:absolute;right:0;top:6px;width:32px}._fxaov::before{color:#b2b2b2;content:'\00D7';display:block;font-size:22px;font-weight:100;line-height:25px;margin:0;padding:0}._a7ko4,._ouuxf{color:#262626;font-weight:600;margin-top:12px}._a7ko4{color:#999;font-weight:400}._mcxlw,._mcxlw:visited{color:#3897f0;font-weight:600;margin-bottom:12px;margin-top:12px}._a7ko4,._mcxlw,._ouuxf{font-size:14px;line-height:16px;text-align:center}</style>
       <style type="text/css" data-isostyle-id="is6b9052f8">._a1rcs{background-color:rgba(0,0,0,.5);bottom:0;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;left:0;overflow-y:auto;position:fixed;right:0;top:0;z-index:1}._3eajp{background:0 0;border:none;cursor:pointer;height:36px;outline:none;overflow:hidden;position:absolute;right:0;top:0;z-index:2}._3eajp::before{color:#fff;content:'\00D7';display:block;font-size:36px;font-weight:600;line-height:36px;padding:0;margin:0}._n3cp9{-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin:auto;max-width:935px;pointer-events:auto;width:100%}._quk42{bottom:0;left:0;pointer-events:none;position:fixed;right:0;top:0;z-index:0}._quk42 *{pointer-events:auto}._g1ax7{display:-webkit-box;display:-ms-flexbox;display:flex;min-height:100%;overflow:auto;width:auto;z-index:1}@media (min-width:481px){._g1ax7{padding:0 40px;pointer-events:none;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}._g1ax7::after,._g1ax7::before{content:'';display:block;-ms-flex-preferred-size:40px;flex-basis:40px;-ms-flex-negative:0;flex-shrink:0}}@media (max-width:480px){._3eajp,._quk42{display:none}}</style>
       <style type="text/css" data-isostyle-id="is-2f1ba76f">._jgxsv{background:#fff;border-radius:5px;margin:0 auto;padding:50px 75px}._p0px1{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-top:30px}._ibk5z{background:0 0;border:none;cursor:pointer;height:54px;outline:0;overflow:hidden;position:absolute;right:0;top:0}._ibk5z::before{color:#999;content:'\00D7';display:block;font-size:24px;padding:15px}._9oc7p{color:#262626;font-size:18px;line-height:24px;margin:0 auto;max-width:250px}</style>
-      <style type="text/css" data-isostyle-id="is-3db291e2">.coreSpriteAddPhoto,.coreSpriteAppIcon,.coreSpriteAppStoreButton,.coreSpriteBoomerang{background-image:url(/static/sprites/core/d21416.png);background-repeat:no-repeat;background-position:-94px -53px;height:80px;width:80px}.coreSpriteAppIcon,.coreSpriteAppStoreButton,.coreSpriteBoomerang{background-position:-308px -136px;height:40px;width:40px}.coreSpriteAppStoreButton,.coreSpriteBoomerang{background-position:-133px -136px;height:42px;width:129px}.coreSpriteBoomerang{background-position:-355px -199px;height:17px;width:17px}.coreSpriteCameraActive,.coreSpriteCameraInactive,.coreSpriteChevronDownGrey,.coreSpriteChevronRight{background-image:url(/static/sprites/core/d21416.png);background-repeat:no-repeat;background-position:-281px -90px;height:21px;width:24px}.coreSpriteCameraInactive,.coreSpriteChevronDownGrey,.coreSpriteChevronRight{background-position:-255px -90px}.coreSpriteChevronDownGrey,.coreSpriteChevronRight{background-position:-323px -90px;height:12px;width:12px}.coreSpriteChevronRight{background-position:-369px -330px;height:11px;width:6px}.coreSpriteClose,.coreSpriteComment,.coreSpriteDesktopNavActivity,.coreSpriteDesktopNavExplore{background-image:url(/static/sprites/core/d21416.png);background-repeat:no-repeat;background-position:-355px -94px;height:20px;width:20px}.coreSpriteComment,.coreSpriteDesktopNavActivity,.coreSpriteDesktopNavExplore{background-position:-104px -322px;height:24px;width:24px}.coreSpriteDesktopNavActivity,.coreSpriteDesktopNavExplore{background-position:-130px -322px}.coreSpriteDesktopNavExplore{background-position:-242px -272px}.coreSpriteDesktopNavLogoAndWordmark,.coreSpriteDesktopNavProfile,.coreSpriteDismissLarge,.coreSpriteDismissSmall{background-image:url(/static/sprites/core/d21416.png);background-repeat:no-repeat;background-position:-177px 0;height:35px;width:176px}.coreSpriteDesktopNavProfile,.coreSpriteDismissLarge,.coreSpriteDismissSmall{background-position:-78px -322px;height:24px;width:24px}.coreSpriteDismissLarge,.coreSpriteDismissSmall{background-position:-177px -115px;height:10px;width:10px}.coreSpriteDismissSmall{background-position:-201px -115px;height:8px;width:8px}.coreSpriteDropdownArrowBlue5,.coreSpriteDropdownArrowBlue6,.coreSpriteDropdownArrowGrey9{background-image:url(/static/sprites/core/d21416.png);background-repeat:no-repeat;background-position:-211px -115px;height:6px;width:9px}.coreSpriteDropdownArrowBlue6,.coreSpriteDropdownArrowGrey9{background-position:-222px -115px}.coreSpriteDropdownArrowGrey9{background-position:-233px -115px}.coreSpriteDropdownArrowWhite,.coreSpriteEllipsis,.coreSpriteFacebookIcon,.coreSpriteFacebookIconInverted{background-image:url(/static/sprites/core/d21416.png);background-repeat:no-repeat;background-position:-244px -115px;height:6px;width:9px}.coreSpriteEllipsis,.coreSpriteFacebookIcon,.coreSpriteFacebookIconInverted{background-position:-308px -37px;height:44px;width:44px}.coreSpriteFacebookIcon,.coreSpriteFacebookIconInverted{background-position:-355px -294px;height:16px;width:16px}.coreSpriteFacebookIconInverted{background-position:-355px -276px}.coreSpriteGlyphGradient,.coreSpriteGlyphWhite,.coreSpriteGooglePlayButton,.coreSpriteHashtag{background-image:url(/static/sprites/core/d21416.png);background-repeat:no-repeat;background-position:-106px -223px;height:40px;width:40px}.coreSpriteGlyphWhite,.coreSpriteGooglePlayButton,.coreSpriteHashtag{background-position:-227px -180px;height:29px;width:29px}.coreSpriteGooglePlayButton,.coreSpriteHashtag{background-position:0 -136px;height:42px;width:131px}.coreSpriteHashtag{background-position:-307px -90px;height:18px;width:14px}.coreSpriteHeartFull,.coreSpriteHeartOpen,.coreSpriteHeartSmall,.coreSpriteHyperlapse{background-image:url(/static/sprites/core/d21416.png);background-repeat:no-repeat;background-position:-182px -322px;height:24px;width:24px}.coreSpriteHeartOpen,.coreSpriteHeartSmall,.coreSpriteHyperlapse{background-position:-208px -322px}.coreSpriteHeartSmall,.coreSpriteHyperlapse{background-position:-355px -137px;height:19px;width:19px}.coreSpriteHyperlapse{background-position:-355px -218px;height:17px;width:17px}.coreSpriteInputAccepted,.coreSpriteInputError,.coreSpriteInputRefresh,.coreSpriteInstallBannerLogo{background-image:url(/static/sprites/core/d21416.png);background-repeat:no-repeat;background-position:-355px -24px;height:22px;width:22px}.coreSpriteInputError,.coreSpriteInputRefresh,.coreSpriteInstallBannerLogo{background-position:-355px 0}.coreSpriteInputRefresh,.coreSpriteInstallBannerLogo{background-position:-355px -48px;width:21px}.coreSpriteInstallBannerLogo{background-position:-255px -37px;height:51px;width:51px}.coreSpriteLeftChevron,.coreSpriteLeftPaginationArrow,.coreSpriteLikeAnimationHeart{background-image:url(/static/sprites/core/d21416.png);background-repeat:no-repeat;background-position:-232px -223px;height:30px;width:30px}.coreSpriteLeftPaginationArrow,.coreSpriteLikeAnimationHeart{background-position:-190px -223px;height:40px;width:40px}.coreSpriteLikeAnimationHeart{background-position:0 -53px;height:81px;width:92px}.coreSpriteLikeHeartFull,.coreSpriteLikeHeartOpen,.coreSpriteLocation,.coreSpriteLock,.coreSpriteLoggedOutWordmark{background-image:url(/static/sprites/core/d21416.png);background-repeat:no-repeat;background-position:0 -322px;height:24px;width:24px}.coreSpriteLikeHeartOpen,.coreSpriteLocation,.coreSpriteLock,.coreSpriteLoggedOutWordmark{background-position:-26px -322px}.coreSpriteLocation,.coreSpriteLock,.coreSpriteLoggedOutWordmark{background-position:-355px -256px;height:18px;width:16px}.coreSpriteLock,.coreSpriteLoggedOutWordmark{background-position:-177px -37px;height:76px;width:76px}.coreSpriteLoggedOutWordmark{background-position:0 0;height:51px;width:175px}.coreSpriteMobileNavActivityActive,.coreSpriteMobileNavActivityInactive,.coreSpriteMobileNavAddPeopleActive{background-image:url(/static/sprites/core/d21416.png);background-repeat:no-repeat;background-position:-294px -272px;height:24px;width:24px}.coreSpriteMobileNavActivityInactive,.coreSpriteMobileNavAddPeopleActive{background-position:-156px -322px}.coreSpriteMobileNavAddPeopleActive{background-position:-288px -180px;width:30px}.coreSpriteMobileNavAddPeopleInactive,.coreSpriteMobileNavExploreActive,.coreSpriteMobileNavExploreInactive{background-image:url(/static/sprites/core/d21416.png);background-repeat:no-repeat;background-position:-320px -180px;height:24px;width:30px}.coreSpriteMobileNavExploreActive,.coreSpriteMobileNavExploreInactive{background-position:-234px -322px;width:24px}.coreSpriteMobileNavExploreInactive{background-position:-260px -322px}.coreSpriteMobileNavHomeActive,.coreSpriteMobileNavHomeInactive,.coreSpriteMobileNavLogo,.coreSpriteMobileNavMenuActive{background-image:url(/static/sprites/core/d21416.png);background-repeat:no-repeat;background-position:-286px -322px;height:24px;width:24px}.coreSpriteMobileNavHomeInactive,.coreSpriteMobileNavLogo,.coreSpriteMobileNavMenuActive{background-position:-312px -322px}.coreSpriteMobileNavLogo,.coreSpriteMobileNavMenuActive{background-position:-328px -223px;height:25px;width:25px}.coreSpriteMobileNavMenuActive{background-position:-52px -322px;height:24px;width:24px}.coreSpriteMobileNavMenuInactive,.coreSpriteMobileNavProfileActive,.coreSpriteMobileNavProfileInactive,.coreSpriteMobileNavSearchActive{background-image:url(/static/sprites/core/d21416.png);background-repeat:no-repeat;background-position:-320px -272px;height:24px;width:24px}.coreSpriteMobileNavProfileActive,.coreSpriteMobileNavProfileInactive,.coreSpriteMobileNavSearchActive{background-position:-216px -272px}.coreSpriteMobileNavProfileInactive,.coreSpriteMobileNavSearchActive{background-position:-190px -272px}.coreSpriteMobileNavSearchActive{background-position:-164px -272px}.coreSpriteMobileNavSearchInactive,.coreSpriteMobileNavSettings,.coreSpriteMobileNavTypeLogo,.coreSpriteNotificationLeftChevron{background-image:url(/static/sprites/core/d21416.png);background-repeat:no-repeat;background-position:-138px -272px;height:24px;width:24px}.coreSpriteMobileNavSettings,.coreSpriteMobileNavTypeLogo,.coreSpriteNotificationLeftChevron{background-position:-112px -272px}.coreSpriteMobileNavTypeLogo,.coreSpriteNotificationLeftChevron{background-position:-122px -180px;height:29px;width:103px}.coreSpriteNotificationLeftChevron{background-position:-338px -322px;height:21px;width:11px}.coreSpriteNotificationRightChevron,.coreSpriteOptionsEllipsis,.coreSpritePagingChevron{background-image:url(/static/sprites/core/d21416.png);background-repeat:no-repeat;background-position:-355px -330px;height:15px;width:12px}.coreSpriteOptionsEllipsis,.coreSpritePagingChevron{background-position:-355px -237px;height:17px;width:17px}.coreSpritePagingChevron{background-position:-268px -272px;height:24px;width:24px}.coreSpritePlayIconSmall,.coreSpriteReload,.coreSpriteRightChevron,.coreSpriteRightPaginationArrow{background-image:url(/static/sprites/core/d21416.png);background-repeat:no-repeat;background-position:-355px -158px;height:19px;width:19px}.coreSpriteReload,.coreSpriteRightChevron,.coreSpriteRightPaginationArrow{background-position:-258px -180px;height:28px;width:28px}.coreSpriteRightChevron,.coreSpriteRightPaginationArrow{background-position:-264px -223px;height:30px;width:30px}.coreSpriteRightPaginationArrow{background-position:-148px -223px;height:40px;width:40px}.coreSpriteSearchClear,.coreSpriteSearchIcon,.coreSpriteSidecarIconLarge,.coreSpriteSidecarIconSmall{background-image:url(/static/sprites/core/d21416.png);background-repeat:no-repeat;background-position:-355px -72px;height:20px;width:20px}.coreSpriteSearchIcon,.coreSpriteSidecarIconLarge,.coreSpriteSidecarIconSmall{background-position:-189px -115px;height:10px;width:10px}.coreSpriteSidecarIconLarge,.coreSpriteSidecarIconSmall{background-position:-57px -223px;height:47px;width:47px}.coreSpriteSidecarIconSmall{background-position:-296px -223px;height:30px;width:30px}.coreSpriteSpeechBubbleSmall,.coreSpriteUserTagIndicator,.coreSpriteVerifiedBadge{background-image:url(/static/sprites/core/d21416.png);background-repeat:no-repeat;background-position:-355px -116px;height:19px;width:19px}.coreSpriteUserTagIndicator,.coreSpriteVerifiedBadge{background-position:-264px -136px;height:41px;width:42px}.coreSpriteVerifiedBadge{background-position:-355px -179px;height:18px;width:18px}.coreSpriteVerifiedBadgeSmall,.coreSpriteVideoIconLarge,.coreSpriteVideoIconSmall{background-image:url(/static/sprites/core/d21416.png);background-repeat:no-repeat;background-position:-337px -90px;height:12px;width:12px}.coreSpriteVideoIconLarge,.coreSpriteVideoIconSmall{background-position:0 -272px;height:48px;width:48px}.coreSpriteVideoIconSmall{background-position:-50px -272px;height:30px;width:30px}.coreSpriteViewCount,.coreSpriteWelcomeDesktop,.coreSpriteWelcomeMobile,.coreSpriteWindowsStoreButton{background-image:url(/static/sprites/core/d21416.png);background-repeat:no-repeat;background-position:-355px -312px;height:16px;width:16px}.coreSpriteWelcomeDesktop,.coreSpriteWelcomeMobile,.coreSpriteWindowsStoreButton{background-position:0 -223px;height:47px;width:55px}.coreSpriteWelcomeMobile,.coreSpriteWindowsStoreButton{background-position:-82px -272px;height:24px;width:28px}.coreSpriteWindowsStoreButton{background-position:0 -180px;height:41px;width:120px}@media (min-device-pixel-ratio:1.5),(-webkit-min-device-pixel-ratio:1.5),(min-resolution:144dpi){.coreSpriteAddPhoto,.coreSpriteAppIcon{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:-93px -52px}.coreSpriteAppIcon{background-position:-183px -218px}.coreSpriteAppStoreButton,.coreSpriteBoomerang,.coreSpriteCameraActive,.coreSpriteCameraInactive{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:-131px -134px}.coreSpriteBoomerang,.coreSpriteCameraActive,.coreSpriteCameraInactive{background-position:-255px -112px}.coreSpriteCameraActive,.coreSpriteCameraInactive{background-position:-252px -88px}.coreSpriteCameraInactive{background-position:-277px -88px}.coreSpriteChevronDownGrey,.coreSpriteChevronRight,.coreSpriteClose,.coreSpriteComment{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:-339px -292px}.coreSpriteChevronRight,.coreSpriteClose,.coreSpriteComment{background-position:-344px -88px}.coreSpriteClose,.coreSpriteComment{background-position:-323px -88px}.coreSpriteComment{background-position:-50px -292px}.coreSpriteDesktopNavActivity,.coreSpriteDesktopNavExplore,.coreSpriteDesktopNavLogoAndWordmark{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:-126px -266px}.coreSpriteDesktopNavExplore,.coreSpriteDesktopNavLogoAndWordmark{background-position:-176px -266px}.coreSpriteDesktopNavLogoAndWordmark{background-position:-176px 0}.coreSpriteDesktopNavProfile,.coreSpriteDismissLarge,.coreSpriteDismissSmall,.coreSpriteDropdownArrowBlue5{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:-151px -266px}.coreSpriteDismissLarge,.coreSpriteDismissSmall,.coreSpriteDropdownArrowBlue5{background-position:-121px -206px}.coreSpriteDismissSmall,.coreSpriteDropdownArrowBlue5{background-position:-344px -100px}.coreSpriteDropdownArrowBlue5{background-position:-142px -206px}.coreSpriteDropdownArrowBlue6,.coreSpriteDropdownArrowGrey9,.coreSpriteDropdownArrowWhite{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:-152px -206px}.coreSpriteDropdownArrowGrey9,.coreSpriteDropdownArrowWhite{background-position:-162px -206px}.coreSpriteDropdownArrowWhite{background-position:-132px -206px}.coreSpriteEllipsis,.coreSpriteFacebookIcon,.coreSpriteFacebookIconInverted,.coreSpriteGlyphGradient{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:-56px -218px}.coreSpriteFacebookIcon,.coreSpriteFacebookIconInverted,.coreSpriteGlyphGradient{background-position:-308px -112px}.coreSpriteFacebookIconInverted,.coreSpriteGlyphGradient{background-position:-309px -292px}.coreSpriteGlyphGradient{background-position:-303px -134px}.coreSpriteGlyphWhite,.coreSpriteGooglePlayButton,.coreSpriteHashtag,.coreSpriteHeartFull{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:-225px -176px}.coreSpriteGooglePlayButton,.coreSpriteHashtag,.coreSpriteHeartFull{background-position:0 -134px}.coreSpriteHashtag,.coreSpriteHeartFull{background-position:-12px -317px}.coreSpriteHeartFull{background-position:-326px -266px}.coreSpriteHeartOpen,.coreSpriteHeartSmall,.coreSpriteHyperlapse,.coreSpriteInputAccepted{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:-75px -292px}.coreSpriteHeartSmall,.coreSpriteHyperlapse,.coreSpriteInputAccepted{background-position:-176px -112px}.coreSpriteHyperlapse,.coreSpriteInputAccepted{background-position:-273px -112px}.coreSpriteInputAccepted{background-position:-248px -292px}.coreSpriteInputError,.coreSpriteInputRefresh,.coreSpriteInstallBannerLogo,.coreSpriteLeftChevron{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:-225px -292px}.coreSpriteInputRefresh,.coreSpriteInstallBannerLogo,.coreSpriteLeftChevron{background-position:-271px -292px}.coreSpriteInstallBannerLogo,.coreSpriteLeftChevron{background-position:-252px -36px}.coreSpriteLeftChevron{background-position:-224px -218px}.coreSpriteLeftPaginationArrow,.coreSpriteLikeAnimationHeart,.coreSpriteLikeHeartFull,.coreSpriteLikeHeartOpen{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:-101px -218px}.coreSpriteLikeAnimationHeart,.coreSpriteLikeHeartFull,.coreSpriteLikeHeartOpen{background-position:0 -52px}.coreSpriteLikeHeartFull,.coreSpriteLikeHeartOpen{background-position:-251px -266px}.coreSpriteLikeHeartOpen{background-position:-276px -266px}.coreSpriteLocation,.coreSpriteLock,.coreSpriteLoggedOutWordmark,.coreSpriteMobileNavActivityActive{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:-293px -292px}.coreSpriteLock,.coreSpriteLoggedOutWordmark,.coreSpriteMobileNavActivityActive{background-position:-176px -36px}.coreSpriteLoggedOutWordmark,.coreSpriteMobileNavActivityActive{background-position:0 0}.coreSpriteMobileNavActivityActive{background-position:-25px -292px}.coreSpriteMobileNavActivityInactive,.coreSpriteMobileNavAddPeopleActive,.coreSpriteMobileNavAddPeopleInactive{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:-26px -266px}.coreSpriteMobileNavAddPeopleActive,.coreSpriteMobileNavAddPeopleInactive{background-position:-316px -176px}.coreSpriteMobileNavAddPeopleInactive{background-position:-285px -176px}.coreSpriteMobileNavExploreActive,.coreSpriteMobileNavExploreInactive,.coreSpriteMobileNavHomeActive{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:-125px -292px}.coreSpriteMobileNavExploreInactive,.coreSpriteMobileNavHomeActive{background-position:-150px -292px}.coreSpriteMobileNavHomeActive{background-position:-175px -292px}.coreSpriteMobileNavHomeInactive,.coreSpriteMobileNavLogo,.coreSpriteMobileNavMenuActive{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:-200px -292px}.coreSpriteMobileNavLogo,.coreSpriteMobileNavMenuActive{background-position:0 -266px}.coreSpriteMobileNavMenuActive{background-position:-226px -266px}.coreSpriteMobileNavMenuInactive,.coreSpriteMobileNavProfileActive,.coreSpriteMobileNavProfileInactive{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:-101px -266px}.coreSpriteMobileNavProfileActive,.coreSpriteMobileNavProfileInactive{background-position:-76px -266px}.coreSpriteMobileNavProfileInactive{background-position:-301px -266px}.coreSpriteMobileNavSearchActive,.coreSpriteMobileNavSearchInactive,.coreSpriteMobileNavSettings{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:0 -292px}.coreSpriteMobileNavSearchInactive,.coreSpriteMobileNavSettings{background-position:-51px -266px}.coreSpriteMobileNavSettings{background-position:-100px -292px}.coreSpriteMobileNavTypeLogo,.coreSpriteNotificationLeftChevron,.coreSpriteNotificationRightChevron{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:-121px -176px}.coreSpriteNotificationLeftChevron,.coreSpriteNotificationRightChevron{background-position:0 -317px}.coreSpriteNotificationRightChevron{background-position:-326px -292px}.coreSpriteOptionsEllipsis,.coreSpritePagingChevron,.coreSpritePlayIconSmall,.coreSpriteReload{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:-291px -112px}.coreSpritePagingChevron,.coreSpritePlayIconSmall,.coreSpriteReload{background-position:-201px -266px}.coreSpritePlayIconSmall,.coreSpriteReload{background-position:-216px -112px}.coreSpriteReload{background-position:-255px -176px}.coreSpriteRightChevron,.coreSpriteRightPaginationArrow,.coreSpriteSearchClear,.coreSpriteSearchIcon{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:-286px -218px}.coreSpriteRightPaginationArrow,.coreSpriteSearchClear,.coreSpriteSearchIcon{background-position:-142px -218px}.coreSpriteSearchClear,.coreSpriteSearchIcon{background-position:-302px -88px}.coreSpriteSearchIcon{background-position:-342px -112px}.coreSpriteSpeechBubbleSmall,.coreSpriteUserTagIndicator,.coreSpriteVerifiedBadge{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:-196px -112px}.coreSpriteUserTagIndicator,.coreSpriteVerifiedBadge{background-position:-260px -134px}.coreSpriteVerifiedBadge{background-position:-236px -112px}.coreSpriteVerifiedBadgeSmall,.coreSpriteVideoIconLarge,.coreSpriteVideoIconSmall{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:-26px -317px}.coreSpriteVideoIconLarge,.coreSpriteVideoIconSmall{background-position:-304px -36px}.coreSpriteVideoIconSmall{background-position:-255px -218px}.coreSpriteViewCount,.coreSpriteWelcomeDesktop,.coreSpriteWelcomeMobile,.coreSpriteWindowsStoreButton{background-image:url(/static/sprites/core/9b46f2.png);background-size:352px 338px;background-position:-325px -112px}.coreSpriteWelcomeDesktop,.coreSpriteWelcomeMobile,.coreSpriteWindowsStoreButton{background-position:0 -218px}.coreSpriteWelcomeMobile,.coreSpriteWindowsStoreButton{background-position:-317px -218px}.coreSpriteWindowsStoreButton{background-position:0 -176px}}</style>
+      
       <style type="text/css" data-isostyle-id="is125b5630">._4pbjs{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;bottom:0;left:0;position:absolute;right:0;top:0}._an5cb{-webkit-animation-duration:.7s;animation-duration:.7s;-webkit-animation-name:like-heart-animation;animation-name:like-heart-animation;margin:0 auto;opacity:0;pointer-events:none;-webkit-transform:scale(0);transform:scale(0)}@-webkit-keyframes like-heart-animation{0%{opacity:0;-webkit-transform:scale(0);transform:scale(0)}15%,70%{opacity:1;-webkit-transform:scale(1);transform:scale(1)}to{opacity:0;-webkit-transform:scale(1);transform:scale(1)}}@keyframes like-heart-animation{0%{opacity:0;-webkit-transform:scale(0);transform:scale(0)}15%,70%{opacity:1;-webkit-transform:scale(1);transform:scale(1)}to{opacity:0;-webkit-transform:scale(1);transform:scale(1)}}</style>
       <style type="text/css" data-isostyle-id="is6c415315">._22yr2{background-color:#efefef;display:block;width:100%}._jjzlb{display:block;overflow:hidden;padding-bottom:100%}._icyx7,._ovg3g{left:0;position:absolute;top:0}._icyx7{height:100%;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:100%}._ovg3g{bottom:0;right:0}</style>
       <style type="text/css" data-isostyle-id="is703056f0">._9jwa8,._anogm{position:relative;right:3px;top:-1px}._9jwa8{right:2px;top:1px}</style>
@@ -137,7 +150,8 @@
       <style type="text/css" data-isostyle-id="is211957dc">._8gpiy{background-color:#fafafa;border-radius:50%;box-sizing:border-box;overflow:hidden;position:relative}._8gpiy::after{border:1px solid rgba(0,0,0,.0975);border-radius:50%;bottom:0;content:'';left:0;pointer-events:none;position:absolute;right:0;top:0}._jzgri{border:0;cursor:pointer;height:100%;padding:0;width:100%}._7ngr6{cursor:inherit;opacity:.5}._g5pg0,._iv4d5{height:100%;left:0;position:absolute;top:0;width:100%}</style>
       <style type="text/css" data-isostyle-id="is-78f8a658">._9o0bc,._i305n{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}._9o0bc{margin-top:17px}._bgr2x._9o0bc{margin-top:0;margin-bottom:20px}._i305n{-ms-flex-pack:distribute;justify-content:space-around;padding:17px 0}._bgr2x._i305n{margin-bottom:12px;padding:0}._218yx{font-size:16px;margin-right:40px}._218yx:first-child{margin-left:0}._218yx:last-child,._bgr2x ._7gq8o:last-child{margin-right:0}._7gq8o{text-align:center;width:33.3%}._7gq8o:last-child{width:33.4%}._bgr2x ._7gq8o{color:#999;font-size:14px}</style>
       <style type="text/css" data-isostyle-id="is712456fa">._42elc{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;margin:0 auto 30px;max-width:935px;width:100%}._hcch2{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-top:11px}._qfkcw ._hcch2{margin-top:0}._glq0k{font-weight:600}._glq0k+._27u4n{margin-top:13px}._27u4n,._glq0k{color:#262626;font-size:14px;line-height:24px}._de9bg{color:#262626;-ms-flex-negative:1;flex-shrink:1;min-width:0}._r43r5{display:block;margin-left:auto;margin-right:auto}._o0ohn{-ms-flex-negative:0;flex-shrink:0}._bugdy,._qu5wj{display:block}._bugdy:empty{display:none}._prk03 ._glq0k{max-width:640px}._jxp6f,._qu5wj{-ms-flex-negative:0;flex-shrink:0;margin-left:20px}._5ayez,._e2yqg{background:0 0;border:0;margin:0;padding:0}._qfkcw ._6ildf{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;max-width:240px}._79dar{display:inline;font-weight:600}._5axto,._o2h6b{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}._o2h6b{border-bottom-color:#efefef;border-bottom-width:1px;padding-bottom:30px}._qfkcw ._o2h6b{border-bottom:none;margin-bottom:24px;padding-bottom:0}._3p78u,._3p78u::before{background:#fff}._28ejm,._28ejm::before{background:#fafafa}._yo2b4 ._27u4n,._yo2b4 ._glq0k{max-width:230px}._38y5t{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-negative:0;flex-shrink:0;height:0;margin-left:5px;margin-right:-10px}._fcwm8,._km8sc{background-color:transparent;border:0;cursor:pointer;padding:0}._fcwm8{margin-left:2px;margin-top:-12px}._km8sc{margin-left:6px;margin-top:-8px}._8mm5v,._i572c{-ms-flex-negative:1;flex-shrink:1;min-width:0}._i572c{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}._8mm5v{-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}._m33rd{-ms-flex-negative:0;flex-shrink:0;margin-left:7px}._56pjv{font-weight:600}._t2uoe{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}@media (min-width:736px){._42elc{box-sizing:content-box;padding:40px 20px 0;width:calc(100% - 40px)}._qfkcw._42elc{padding-top:60px}._de9bg{-ms-flex-preferred-size:30px;flex-basis:30px;-webkit-box-flex:2;-ms-flex-positive:2;flex-grow:2}._r43r5{height:152px;margin-bottom:-7px;margin-top:-7px;width:152px}._qfkcw ._r43r5{margin-bottom:0;margin-top:0}._o0ohn{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;margin-right:30px}._bugdy{font-size:16px;line-height:24px;margin-top:14px}._qfkcw ._bugdy{margin:0}._5axto{margin-bottom:45px}._5axto,._o2h6b{padding:20px 0}._qfkcw ._5axto{padding:0;margin-bottom:44px}._8mm5v{margin-bottom:2px;margin-top:2px}._qfkcw ._8mm5v{margin-bottom:20px;margin-top:0}._i572c{font-size:32px;line-height:40px;font-weight:200}._3p78u{border-radius:4px;border:1px solid #efefef;margin-bottom:28px;margin-top:-16px;position:relative}}@media (max-width:735px){._de9bg{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}._r43r5{height:77px;margin-bottom:-6px;margin-top:-6px;width:77px}._qfkcw ._r43r5{margin:0}._o0ohn{margin-right:25px}._qfkcw ._o0ohn{margin-right:28px}._bugdy{font-size:14px;line-height:17px;margin-top:7px;overflow:hidden;text-overflow:ellipsis}._qfkcw ._bugdy{margin:0 16px 12px;padding-bottom:24px;border-bottom:1px solid #dbdbdb}._5axto{margin:30px 16px}._o2h6b{margin-left:16px;margin-right:16px;margin-top:30px}._gor94{font-size:14px;margin-left:10px;margin-right:10px}._ocznt{margin-top:10px}._8mm5v{margin-bottom:11px;margin-top:12px}._qfkcw ._8mm5v{margin-bottom:12px;margin-top:0}._i572c{font-size:22px;line-height:26px}._3p78u,._3p78u::before{border:1px solid #efefef;border-right:none}._3p78u{border-left:none;margin-bottom:24px;margin-top:-12px;position:relative}._3p78u::before{border-bottom:none;content:'';display:block;height:14px;margin-top:-20px;position:absolute;right:28px;-webkit-transform:rotate(45deg);transform:rotate(45deg);width:14px}}@media (max-width:735px) and (min-width:386px){._3p78u::before{left:343px;right:auto}}</style>
-   </head>
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+</head>
    <body class="">
       <span id="react-root" aria-hidden="false">
          <section data-reactroot="" class="_8f735">
@@ -145,16 +159,28 @@
                <article class="_42elc _qfkcw">
                   <header class="_5axto">
                      <div class="_o0ohn">
-                        <div class="_8gpiy _r43r5">
-                           <button class="_jzgri" title="Thay đổi ảnh đại diện"><img alt="Thay đổi ảnh đại diện" class="_g5pg0" src="./9 Melody (@9melodyy) • Ảnh và video trên Instagram_files/18443640_962364333904379_2308357399032889344_a.jpg"></button>
+                        <div class="_8gpiy _r43r5"><?php
+							$servername = "localhost";
+							$username = "root";
+							$password = "";
+							$dbname = "instagram";
+
+							// Create connection
+							$conn = new mysqli($servername, $username, $password, $dbname);
+							$sql = "SELECT * FROM user WHERE userID = ".$_GET["userID"];
+							//Tim nguoi dang bai
+							$user = $conn->query($sql);
+							$row = $user->fetch_assoc();
+						?>
+                          <button class="_jzgri" title="Thay đổi ảnh đại diện"><img alt="Thay đổi ảnh đại diện" class="_g5pg0" src="<?php echo $row["mediaPath"]; ?>"></button>
                            <form enctype="multipart/form-data"><input type="file" accept="image/jpeg" class="_loq3v"></form>
                         </div>
                      </div>
                      <div class="_de9bg">
                         <div class="_8mm5v">
-                           <h1 class="_i572c notranslate" title="9melodyy">9melodyy</h1>
-                           <a class="_qu5wj" href="https://www.instagram.com/accounts/edit/"><span class="_7k49n"><button class="_ah57t _6y2ah _frcv2 _rmr7s">Chỉnh sửa trang cá nhân</button></span></a>
-                           <div class="_38y5t"><button class="_fcwm8 coreSpriteMobileNavSettings _soakw">Tùy chọn</button></div>
+                           <h1 class="_i572c notranslate" title="<?php echo $row["username"]; ?>"><?php echo $row["username"]; ?></h1>
+                           <a class="_qu5wj" href="editProfile.php?userID=<?php echo $row["userID"] ?>"><span class="_7k49n"><button class="_ah57t _6y2ah _frcv2 _rmr7s">Chỉnh sửa trang cá nhân</button></span></a>
+                           <div class="_38y5t"><a href="logout.php"><button class="_fcwm8 coreSpriteMobileNavSettings _soakw">Tùy chọn</button></a></div>
                         </div>
                         <ul class="_9o0bc _bgr2x">
                            <li class="_218yx">
@@ -204,88 +230,34 @@
                               </div>
                            </a>
                         </div>
-                        <div class="_myci9">
-                           <a class="_8mlbc _vbtk2 _t5r8b" href="https://www.instagram.com/p/BS8aNVeF_cM/?taken-by=9melodyy">
-                              <div class="_22yr2">
-                                 <div class="_jjzlb"><img class="_icyx7" id="pImage_37" src="./9 Melody (@9melodyy) • Ảnh và video trên Instagram_files/17934043_1872653969615807_8259090400740900864_n.jpg"></div>
-                                 <!-- react-empty: 2201 -->
-                                 <div class="_ovg3g"></div>
-                              </div>
-                           </a>
-                           <a class="_8mlbc _vbtk2 _t5r8b" href="https://www.instagram.com/p/BSYeDIsB7yd/?taken-by=9melodyy">
-                              <div class="_22yr2">
-                                 <div class="_jjzlb"><img class="_icyx7" id="pImage_38" src="./9 Melody (@9melodyy) • Ảnh và video trên Instagram_files/17662208_654332794774265_1454312532431863808_n.jpg"></div>
-                                 <!-- react-empty: 2209 -->
-                                 <div class="_ovg3g"></div>
-                              </div>
-                           </a>
-                           <a class="_8mlbc _vbtk2 _t5r8b" href="https://www.instagram.com/p/BST0jZ0BooS/?taken-by=9melodyy">
-                              <div class="_22yr2">
-                                 <div class="_jjzlb"><img alt="Escaped" class="_icyx7" id="pImage_39" src="./9 Melody (@9melodyy) • Ảnh và video trên Instagram_files/17661842_1248287895291081_8188469666537013248_n.jpg"></div>
-                                 <!-- react-empty: 2217 -->
-                                 <div class="_ovg3g"></div>
-                              </div>
-                           </a>
-                        </div>
-                        <div class="_myci9">
-                           <a class="_8mlbc _vbtk2 _t5r8b" href="https://www.instagram.com/p/BSFalBgBIR_/?taken-by=9melodyy">
-                              <div class="_22yr2">
-                                 <div class="_jjzlb"><img class="_icyx7" id="pImage_40" src="./9 Melody (@9melodyy) • Ảnh và video trên Instagram_files/17493494_1849284262008623_4384588849557274624_n.jpg"></div>
-                                 <!-- react-empty: 2226 -->
-                                 <div class="_ovg3g"></div>
-                              </div>
-                           </a>
-                           <a class="_8mlbc _vbtk2 _t5r8b" href="https://www.instagram.com/p/BSBzHRsBCSp/?taken-by=9melodyy">
-                              <div class="_22yr2">
-                                 <div class="_jjzlb"><img class="_icyx7" id="pImage_41" src="./9 Melody (@9melodyy) • Ảnh và video trên Instagram_files/17494656_406238543066209_6588829536891174912_n.jpg"></div>
-                                 <!-- react-empty: 2234 -->
-                                 <div class="_ovg3g"></div>
-                              </div>
-                           </a>
-                           <a class="_8mlbc _vbtk2 _t5r8b" href="https://www.instagram.com/p/BRybiuxBz5q/?taken-by=9melodyy">
-                              <div class="_22yr2">
-                                 <div class="_jjzlb"><img alt="Hm..." class="_icyx7" id="pImage_42" src="./9 Melody (@9melodyy) • Ảnh và video trên Instagram_files/17265813_1560461863994462_99456672182829056_n.jpg"></div>
-                                 <!-- react-empty: 2242 -->
-                                 <div class="_ovg3g"></div>
-                              </div>
-                           </a>
-                        </div>
-                        <div class="_myci9">
-                           <a class="_8mlbc _vbtk2 _t5r8b" href="https://www.instagram.com/p/BB2J33DR-nN/?taken-by=9melodyy">
-                              <div class="_22yr2">
-                                 <div class="_jjzlb"><img alt="Baby :*" class="_icyx7" id="pImage_43" src="./9 Melody (@9melodyy) • Ảnh và video trên Instagram_files/12724750_1083364905039529_213418603_n.jpg"></div>
-                                 <!-- react-empty: 2251 -->
-                                 <div class="_ovg3g"></div>
-                              </div>
-                           </a>
-                           <div class="_t5r8b _81g1f"></div>
-                           <div class="_t5r8b _81g1f"></div>
-                        </div>
+   
                      </div>
-                     <div class="_ikcuh">
-                        <div class="_4tedc"><iframe aria-hidden="true" class="_823eg" tabindex="-1" src="./9 Melody (@9melodyy) • Ảnh và video trên Instagram_files/saved_resource.html"></iframe></div>
-                     </div>
+                     
                   </div>
                </article>
             </main>
-            <nav class="_onabe _5z3y6" role="navigation">
+            <nav class="_onabe _5z3y6 menu" role="navigation">
                <div class="_fjpuc _sq03j">
                   <div class="_6v8vp">
-                     <div class="_df358">
-                        <div class="_jha5b">
-                           <div class="_om391"><a class="home" href="/index"><span><img src="static/sprites/core/home.png"></span></a></div>
+                    <div class="_df358">
+                            <div class="_jha5b">
+                                <div class="_om391"><a class="_1b8in _soakw coreSpriteMobileNavHomeActive" href="index.php">Instagram</a></div>
+                            </div>
+                            <div class="_9pxkq _icv3j">
+                                <div class="search-box">
+                                    <input type="text" class="_9x5sw _qy55y" autocomplete="off" placeholder="Tìm kiếm" />
+                                    <div class="result"></div>
+                                </div>
+                            </div>
+                            <div class="_nhei4">
+                                <div class="_pq5am">
+                                    <div class="_7smet"><a class="_soakw _vbtk2 coreSpriteMobileNavSearchInactive" href="search.php">Tìm người</a></div>
+                                    <div class="_7smet"><span class="_im3et _vbtk2 coreSpriteDesktopNavActivity" id="noti" onclick="test()"></span><div id="noti_result"></div></div>
+									
+                                    <div class="_7smet"><a class="_soakw _vbtk2 coreSpriteDesktopNavProfile" href="profile.php?userID=<?php echo $_SESSION["userID"]?>">Trang cá nhân</a></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="_9pxkq _icv3j">
-                           <input type="text" class="_9x5sw _qy55y" placeholder="Tìm kiếm" value="">
-                        </div>
-                        <div class="_nhei4">
-                           <div class="_pq5am">
-                              <div class="_7smet"><a class="searchPeople" href="https://www.instagram.com/explore/"><span><img src="static/sprites/core/search.png"></span></a></div>
-                              <div class="_7smet"><a href="https://www.instagram.com/#" class="notication"><span><img src="static/sprites/core/noti.png"></span></a></div>
-                              <div class="_7smet"><a class="profile" href="#"><span><img src="static/sprites/core/profile.png"></span></a></div>
-                           </div>
-                        </div>
-                     </div>
                   </div>
                </div>
             </nav>
@@ -313,5 +285,60 @@
             </div>
          </section>
       </span>
+	<script type="text/javascript">
+        $(document).ready(function () {
+            $('.search-box input[type="text"]').on("keyup input", function () {
+                /* Get input value on change */
+                var inputVal = $(this).val();
+                var resultDropdown = $(this).siblings(".result");
+                if (inputVal.length) {
+                    $.get("livesearch.php", { term: inputVal }).done(function (data) {
+                        // Display the returned data in browser
+                        resultDropdown.html(data);
+                    });
+                } else {
+                    resultDropdown.empty();
+                }
+            });
+
+            // Set search input value on click of result item
+            $(document).on("click", ".result p", function () {
+                $(this).parents(".search-box").find('input[type="text"]').val($(this).text());
+                $(this).parent(".result").empty();
+            });
+        });
+		
+		
+
+    </script>
+	<script type="text/javascript">
+        // Create a clone of the menu, right next to original.
+        $('.menu').addClass('original').clone().insertAfter('.menu').addClass('cloned').css('position', 'fixed').css('top', '0').css('margin-top', '0').css('z-index', '500').removeClass('original').hide();
+
+        scrollIntervalID = setInterval(stickIt, 10);
+
+
+        function stickIt() {
+
+            var orgElementPos = $('.original').offset();
+            orgElementTop = orgElementPos.top;
+
+            if ($(window).scrollTop() >= (orgElementTop)) {
+                // scrolled past the original position; now only show the cloned, sticky element.
+
+                // Cloned element should always have same left position and width as original element.
+                orgElement = $('.original');
+                coordsOrgElement = orgElement.offset();
+                leftOrgElement = coordsOrgElement.left;
+                widthOrgElement = orgElement.css('width');
+                $('.cloned').css('left', leftOrgElement + 'px').css('top', 0).css('width', widthOrgElement).show();
+                $('.original').css('visibility', 'hidden');
+            } else {
+                // not scrolled past the menu; only show the original menu.
+                $('.cloned').hide();
+                $('.original').css('visibility', 'visible');
+            }
+        }
+    </script
    </body>
 </html>

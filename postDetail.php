@@ -13,7 +13,9 @@
 		}
 	}
 	
-?>
+	
+	
+	?>
 <html lang="vi" class="js logged-in ">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -26,37 +28,6 @@
     <link rel="stylesheet" type="text/css" href="css/is.css">
 
     <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            //khai báo nút submit form
-            var submit = $("button[type='submit']");
-
-            //khi thực hiện kích vào nút Login
-            submit.click(function () {
-                //khai báo các biến
-                var userID = $("input[name='userIDupload']").val(); //lấy giá trị input tài khoản
-                var caption = $("input[name='caption']").val(); //lấy giá trị input mật khẩu
-                var image = $("input[name='upload']").val();
-
-                //lay tat ca du lieu trong form	login
-                var data = $('form#formUpload').serialize();
-                //su dung ham $.ajax()
-                $.ajax({
-                    type: 'POST', //kiểu post
-                    url: 'updateStatus.php', //gửi dữ liệu sang trang submit.php
-                    data: data,
-                    success: function (data) {
-                        if (data == 'false') {
-                            alert('Đã xảy ra lỗi. Thử lại sau.');
-                        } else {
-                            $('#content').html(data);
-                        }
-                    }
-                });
-                return false;
-            });
-        });
-    </script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
 </head>
@@ -68,27 +39,153 @@
                     <div class="_qj7yb">
                         <div>
                             <div class="wrapper">
-                                <article class="_h2d1o _j5hrx _pieko  _es1du _rgrbt" style="margin-bottom: 50px">
-                                    <form action="updateStatus.php" method="POST" enctype="multipart/form-data">
-                                        <header class="_s6yvg">
-                                            <input type="hidden" name="userIDupload" value="<?php echo $_SESSION["userID"];?>">
-                                            <input type="text" class="_7uiwk _qy55y" aria-label="Bạn đang nghĩ gì..." placeholder="Bạn đang nghĩ gì..." value="" name="caption">
-                                            <div class="_bm6zw">
-                                                <!-- react-empty: 741 -->
-                                            </div>
-                                            <input class="_9q0pi " style="border-style: solid;" type="submit" value="Đăng">
-                                        </header>
-                                        <div>
-                                            <input id="fileUpload" class="_7uiwk _qy55y" type="file" name="fileToUpload" id="fileToUpload">
-                                            <div id="image-holder"></div>
+							<?php
+							$value = $_GET["val"];
+	$post = $mysqli->prepare('select * from post WHERE postID='.$value);
+	$post->execute(); //Execute prepared Query
+	// sua id name message, thay vao la cac thuoc tinh cua post
+	$post->bind_result($postID, $userID, $time,$mediaPath,$caption);
+	while($post->fetch()){
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "instagram";
 
-                                        </div>
-                                    </form>
-                                </article>
-                            </div>
-                            <div class="wrapper">
-                                <ul id="results"><!-- results appear here --></ul>
-                                
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	$sql = "SELECT * FROM user WHERE userID = ".$userID;
+	//Tim nguoi dang bai
+	$user = $conn->query($sql);
+	$row = $user->fetch_assoc();
+	//Tim so luong like cua bai viet
+	$sql = "SELECT * FROM liked WHERE postID = ".$postID;
+	$like = $conn->query($sql);
+	
+	//kiem tra xem nguoi dung da like bai viet chua
+	$sql = "SELECT * FROM liked WHERE postID = ".$postID." AND userID = ".$_SESSION["userID"];
+	$liked = $conn->query($sql);
+	
+	
+	//Tim comment
+	$sql = "SELECT * FROM comment WHERE postID = ".$postID;
+	$comment = $conn->query($sql);
+	
+	//Ham tinh thoi gian dang bai
+	$timePost	= $time;
+	$timeReply	= date('Y/m/d H:i:s');
+
+	$datePost	= date_parse_from_format('Y/m/d H:i:s', $timePost);
+	$dateReply	= date_parse_from_format('Y/m/d H:i:s', $timeReply);
+
+	$tsPost		= mktime($datePost['hour'], $datePost['minute'], $datePost['second'], $datePost['month'], $datePost['day'], $datePost['year']);
+	$tsReply	= mktime($dateReply['hour'], $dateReply['minute'], $dateReply['second'], $dateReply['month'], $dateReply['day'], $dateReply['year']);
+
+	$distance 	= $tsReply - $tsPost;
+
+	// 23 seconds ago
+	// 23 minutues ago
+	// 2 hours ago
+	// Yesterday at 09:20:23
+	// 18/06/2013 at 09:20:23
+
+
+	switch ($distance){
+		case ($distance < 60): 
+			$result = ($distance == 1) ? $distance . ' second ago' : $distance . ' seconds ago';
+			break;
+		case ($distance >= 60 && $distance < 3600):
+			$minute	= round($distance/60);
+			$result = ($minute == 1) ? $minute . ' minute ago' : $minute . ' minutes ago';
+			break;
+		case ($distance >= 3600 && $distance < 86400):
+			$hour	= round($distance/3600);
+			$result = ($hour == 1) ? $hour . ' hour ago' : $hour . ' hours ago';
+			break;
+		default:
+			$day = round($distance/86400);
+			$result = $day.' days ago';
+			break;
+	}
+	echo '<article class="_h2d1o _j5hrx _pieko">';
+	echo '<header class="_s6yvg">';
+	echo '<a class="_5lote _pss4f _vbtk2" href="'.'" style="width: 30px; height: 30px;"><img class="_a012k" src="'.$row["mediaPath"].'"></a>';
+	echo '<div class="_dzy0a">';
+	echo '<a class="_4zhc5 notranslate _ook48" title="'.$userID.'" href="'.'">'.$row["username"].'</a>';
+	echo '<div class="_bm6zw">
+				<!-- react-empty: 741 -->
+					</div>
+				</div>
+		 ';
+	echo '<a class="_ljyfo" href="#"><time class="_379kp" datetime="'.$time.'">'.$result.'</time></a>';
+	echo '</header>';
+	echo '<div>';
+	echo 	'<div class="_9f9pr">';
+	echo 		'<div>';
+	echo 			'<div class="_22yr2 _e0mru">';
+	echo				'<div class="_jjzlb" style="padding-bottom: 100%;"><img alt="@'.$row["username"].'" class="_icyx7" id="pImage_10" src="'.$mediaPath.'"></div>';
+	echo	'
+							<!-- react-empty: 750 -->
+						   <div class="_ovg3g"></div>
+						</div>
+					 </div>
+	';
+	echo '</div></div>';
+	echo '
+			<div class="_es1du _rgrbt">
+                              <section class="_tfkbw _hpiil">
+                                 <div class="_iuf51 _oajsw">
+                                    <span class="_tf9x3">
+                                       <!-- react-text: 777 --><!-- /react-text --><span>'.$like->num_rows.'</span><!-- react-text: 779 --> lượt thích<!-- /react-text -->
+                                    </span>
+                                 </div>
+                              </section>
+                              <ul class="_mo9iw _pnraw">
+                                 <li class="_nk46a">
+                                    <h1><a class="_4zhc5 notranslate _iqaka" title="'.$row["username"].'" href="profile.php/?username='.$row["username"].'">'.$row["username"].'</a><span>'.$caption.'</span></h1>
+                                 </li>';
+								 echo'						  <section class="_jveic _dsvln">
+								 <a class="_ebwb5 _1tv0k" href="like_1.php?postID='.$postID.'" role="button" aria-disabled="true"><span class="_soakw ';
+	if($liked->num_rows > 0){
+		echo 'coreSpriteHeartFull';
+	}else{
+		echo 'coreSpriteHeartOpen';
+	}							 
+	echo 						'">Like Or Dislike</span></a>
+								
+								 <form class="_k3t69" action = "comment_1.php" method="GET">
+								 <input type="hidden" name="postID" value="'.$postID.'">
+								 <input type="text" class="_7uiwk _qy55y" aria-label="Thêm bình luận…" placeholder="Thêm bình luận…" value="" name="comment">
+								 <input class="_9q0pi" type="submit" id="comment" value="Send">
+								 </form>
+							  </section>';
+								 if ($comment->num_rows > 0) {
+									// output data of each row
+									$i=0;
+									while($row = $comment->fetch_assoc()) {
+											$servername2 = "localhost";
+											$username2 = "root";
+											$password2 = "";
+											$dbname2 = "instagram";
+											// Create connection
+											$conn2 = new mysqli($servername2, $username2, $password2, $dbname2);
+											$sql2 = "SELECT * FROM user WHERE userID = ".$row["userID"];
+											//Tim nguoi dang bai
+											$user2 = $conn2->query($sql2);
+											$row2 = $user2->fetch_assoc();
+											echo '<li class="_nk46a"><a class="_4zhc5 notranslate _iqaka" title="'.$row2["username"].'" href="profile.php/?username='.$row2["username"].'">'.$row2["username"].'</a><span><span>'.$row["comment"].'</span></span></li>';
+											$conn2->close();
+										}
+									}
+	echo '
+							  </ul>
+	
+							</div>
+							';
+	
+	echo '</article>';
+	$conn->close();
+	}
+							?>
                             </div>
                         </div>
                     </div>
@@ -143,7 +240,8 @@
             </div>
         </section>
     </span>
-	<script type="text/javascript">
+	
+	    <script type="text/javascript">
         $(document).ready(function () {
             $('.search-box input[type="text"]').on("keyup input", function () {
                 /* Get input value on change */
@@ -169,6 +267,8 @@
 		
 
     </script>
+	
+	
     <script type="text/javascript">
 		function test(){
 			$(document).ready(function() {
@@ -181,73 +281,8 @@
 		}
 		
 		
-        
-		
-		var track_page = 1; //track user scroll as page number, right now page number is 1
-        var loading = false; //prevents multiple loads
-
-        load_contents(track_page); //initial content load
-
-        $(window).scroll(function () { //detect page scroll
-            if ($(window).scrollTop() + $(window).height() >= $(document).height()) { //if user scrolled to bottom of the page
-                track_page++; //page number increment
-                load_contents(track_page); //load content
-            }
-        });
-        //Ajax load function
-        function load_contents(track_page) {
-            if (loading == false) {
-                loading = true;  //set loading flag on
-                $('.loading-info').show(); //show loading animation
-                $.post('fetch_pages.php', { 'page': track_page }, function (data) {
-                    loading = false; //set loading flag off once the content is loaded
-                    if (data.trim().length == 0) {
-                        //notify user if nothing to load
-                        $('.loading-info').show();
-                        return;
-                    }
-                    $('.loading-info').hide(); //hide loading animation once data is received
-                    $("#results").append(data); //append data into #results element
-
-                }).fail(function (xhr, ajaxOptions, thrownError) { //any errors?
-                    alert(thrownError); //alert with HTTP error
-                })
-            }
-        }
     </script>
-    <script>
-        $(document).ready(function () {
-            $("#fileUpload").on('change', function () {
-                //Get count of selected files
-                var countFiles = $(this)[0].files.length;
-                var imgPath = $(this)[0].value;
-                var extn = imgPath.substring(imgPath.lastIndexOf('.') + 1).toLowerCase();
-                var image_holder = $("#image-holder");
-                image_holder.empty();
-                if (extn == "gif" || extn == "png" || extn == "jpg" || extn == "jpeg") {
-                    if (typeof (FileReader) != "undefined") {
-                        //loop for each file selected for uploaded.
-                        for (var i = 0; i < countFiles; i++) {
-                            var reader = new FileReader();
-                            reader.onload = function (e) {
-                                $("<img />", {
-                                    "src": e.target.result,
-                                    "class": "thumb-image _icyx7"
-                                }).appendTo(image_holder);
-                            }
-                            $("#image-holder").addClass('_jjzlb');
-                            image_holder.show();
-                            reader.readAsDataURL($(this)[0].files[i]);
-                        }
-                    } else {
-                        //alert("This browser does not support FileReader.");
-                    }
-                } else {
-                    //alert("Pls select only images");
-                }
-            });
-        });
-    </script>
+	
     <script type="text/javascript">
         // Create a clone of the menu, right next to original.
         $('.menu').addClass('original').clone().insertAfter('.menu').addClass('cloned').css('position', 'fixed').css('top', '0').css('margin-top', '0').css('z-index', '500').removeClass('original').hide();

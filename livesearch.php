@@ -31,7 +31,7 @@ if(isset($_REQUEST['term'])){
 					echo '<header class="_s6yvg">';
 					echo '<a class="_5lote _pss4f _vbtk2" href="'.'" style="width: 30px; height: 30px;"><img class="_a012k" src="'.$row["mediaPath"].'"></a>';
 					echo '<div class="_dzy0a">';
-					echo '<a class="_4zhc5 notranslate _ook48" title="'.$row["userID"].'" href="profile.php?username='.$row["username"].'">'.$row["username"].'</a>';
+					echo '<a class="_4zhc5 notranslate _ook48" title="'.$row["userID"].'" href="profile.php?userID='.$row["userID"].'">'.$row["username"].'</a>';
 					echo '</header>';
 					echo '</article>';
                 }

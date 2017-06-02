@@ -16,15 +16,14 @@
 			if($result2->num_rows > 0){
 				while($row2 = $result2->fetch_assoc()){
 					$user = $row2["userID"];
-					$resutl3 = $mysqli->query("select * from user where userID = '$user'");
+					$result3 = $mysqli->query("select * from user where userID = '$user'");
 					
 					if($result3->num_rows > 0){
 						while($row3 = $result3->fetch_assoc()){	
 							echo '<article class="_h2d1o _j5hrx _pieko">';
 							echo '<header class="_s6yvg">';
-							echo '<a class="_5lote _pss4f _vbtk2" href="'.'" style="width: 30px; height: 30px;"><img class="_a012k" src="'.$row3["mediaPath"].'"></a>';
 							echo '<div class="_dzy0a">';
-							echo '<a class="_4zhc5 notranslate _ook48" title="'.$row3["userID"].' commnent to your post" href="profile.php?username='.$row3["username"].'">'.$row3["username"].'</a>';
+							echo '<a class="_4zhc5 notranslate _ook48" title="'.$row3["userID"].'" href="profile.php?username='.$row3["username"].'">'.$row3["username"].' comment your post</a>';
 							echo '</header>';
 							echo '</article>';
 						}
@@ -42,9 +41,8 @@
 						while($row5 = $result5->fetch_assoc()){	
 							echo '<article class="_h2d1o _j5hrx _pieko">';
 							echo '<header class="_s6yvg">';
-							echo '<a class="_5lote _pss4f _vbtk2" href="'.'" style="width: 30px; height: 30px;"><img class="_a012k" src="'.$row3["mediaPath"].'"></a>';
 							echo '<div class="_dzy0a">';
-							echo '<a class="_4zhc5 notranslate _ook48" title="'.$row5["userID"].' like to your post" href="profile.php?username='.$row5["username"].'">'.$row5["username"].'</a>';
+							echo '<a class="_4zhc5 notranslate _ook48" title="'.$row5["userID"].'" href="profile.php?username='.$row5["username"].'">'.$row5["username"].' like your post</a>';
 							echo '</header>';
 							echo '</article>';
 						}
@@ -52,5 +50,6 @@
 				}
 			}
 		}
+	}
 	}
 ?>
